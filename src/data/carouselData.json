@@ -1,0 +1,46 @@
+{
+    "slides": [
+        {
+            "src": "https://i.ibb.co/cJxmScD/pngegg-33.png",
+            "heading": "Land Rover Range Rover",
+            "desc": "The Range Rover is a 4x4 luxury SUV produced by Land Rover, a marque and sub-brand of Jaguar Land Rover.",
+            "alt": "Image 1 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/x25GMDn/pngegg-66.png",
+            "heading": "Mercedes-Benz S-Class",
+            "desc": "The Mercedes-Benz S-Class, formerly known as Sonderklasse, is a series of full-sized luxury sedans, limousines.",
+            "alt": "Image 2 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/mvPWD69/pngegg-2.png",
+            "heading": "Land Rover Range Rover",
+            "desc": "The Range Rover is a 4x4 luxury SUV produced by Land Rover, a marque and sub-brand of Jaguar Land Rover.",
+            "alt": "Image 3 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/Jxp2PBv/pngegg-47.png",
+            "heading": "Mercedes-Benz S-Class",
+            "desc": "The Mercedes-Benz S-Class, formerly known as Sonderklasse, is a series of full-sized luxury sedans, limousines.",
+            "alt": "Image 4 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/K2jYhjB/pngegg-46.png",
+            "heading": "Land Rover Range Rover",
+            "desc": "The Range Rover is a 4x4 luxury SUV produced by Land Rover, a marque and sub-brand of Jaguar Land Rover.",
+            "alt": "Image 5 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/gm4FJBx/pngegg-29.png",
+            "heading": "Mercedes-Benz S-Class",
+            "desc": "The Mercedes-Benz S-Class, formerly known as Sonderklasse, is a series of full-sized luxury sedans, limousines.",
+            "alt": "Image 6 for carousel"
+        },
+        {
+            "src": "https://i.ibb.co/9hzk1JC/pngegg-13.png",
+            "heading": "Land Rover Range Rover",
+            "desc": "The Range Rover is a 4x4 luxury SUV produced by Land Rover, a marque and sub-brand of Jaguar Land Rover.",
+            "alt": "Image 7 for carousel"
+        }
+    ]
+}
