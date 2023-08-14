@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './Carousel.css';
 import { LiaLongArrowAltLeftSolid, LiaLongArrowAltRightSolid } from 'react-icons/lia';
 
 const Carousel = ({ data }) => {
-    const timeRef = useRef(null);
     const [slide, setSlide] = useState(0);
 
     const prevSlide = () => {
@@ -14,11 +13,6 @@ const Carousel = ({ data }) => {
         setSlide(slide === data.length - 1 ? 0 : slide + 1);
     };
 
-    // useEffect(() => {
-    //     timeRef.current = setTimeout(() => {
-    //         nextSlide();
-    //     }, 50000);
-    // })
     return (
         <div id='carousel' className="flex justify-center items-center relative top-32">
             <button type="button" className='px-2 py-1 rounded bg-red-500 hover:bg-red-600 ease-linear duration-150' onClick={prevSlide}>
