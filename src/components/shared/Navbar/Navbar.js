@@ -14,7 +14,7 @@ const Navbar = () => {
     const [navtoggle, setNavToggle] = useState(false);
 
     return (
-        <div className='top-0 px-2 md:px-0 w-full'>
+        <div className='absolute z-10 top-0 px-2 md:px-0 w-full'>
             {/* <div className="bg-transparent relative max-w-screen-xl mx-auto z-50 flex items-center justify-between py-5">
                 <div className='md:flex justify-between md:w-1/3'>
                     <p className="text-sm text-gray-200 hover:underline ease-linear duration-150"><a href="/" className="">+88-01794-094122</a></p>
@@ -38,30 +38,28 @@ const Navbar = () => {
                     </a>
                 </div>
             </div> */}
-            <nav className="bg-transparent relative max-w-screen-xl mx-auto z-50 top-0 left-0">
-                <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4">
-                    <a href="/" className="flex items-center">
-                        <img className='w-20 md:w-40' src={url} alt="" />
-                    </a>
-                    <div className="flex md:order-2">
-                        <button type="button" className="text-[#ff7f00] rounded-lg md:rounded-3xl bg-[#ffffffe6] ring-2 ring-[#ffffffe6] md:ring-0 md:border-2 border-[#ffffffe6] mr-3 md:mr-0 py-0 md:py-2 px-4 md:px-8 text-[12px] md:text-sm font-bold md:font-semibold hover:bg-transparent hover:border-[#ff7f00] ease-linear duration-200">Sign In</button>
-                        <button onClick={() => setNavToggle(!navtoggle)} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
-                            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div className={`${navtoggle ? "block" : "hidden"} 'items-center justify-between  w-full md:flex md:w-auto z-50 md:order-1`} id="navbar-sticky">
-                        <ul className="flex flex-col p-4 md:p-0 mt-4 text-black md:text-white font-medium border border-gray-100 z-50 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0">
-                            {navigation.map((item) => (
-                                <li id='sidebar' key={item.name}>
-                                    <NavLink to={item.href} className="px-3 py-2 rounded text-sm font-semibold hover:bg-white hover:text-black ease-linear duration-200">
-                                        {item.name}
-                                    </NavLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+            <nav className="bg-transparent md:max-w-screen-2xl pt-4 flex flex-wrap items-center justify-between mx-auto">
+                <a href="/" className="flex items-center">
+                    <img className='w-24 md:w-40' src={url} alt="" />
+                </a>
+                <div className="flex md:order-2">
+                    <button type="button" className="rounded p-[8px] mr-2 md:mr-0 md:px-3 md:py-2 border-2 border-[#88C123] bg-[#88C123] text-white text-sm font-semibold hover:bg-transparent ease-linear duration-150">Sign In</button>
+                    <button onClick={() => setNavToggle(!navtoggle)} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div className={`${navtoggle ? "block" : "hidden"} 'items-center justify-between  w-full md:flex md:w-auto z-50 md:order-1`} id="navbar-sticky">
+                    <ul className="flex flex-col md:text-white rounded md:rounded-none mt-3 md:mt-0 text-center md:flex-row md:space-x-6 bg-white md:bg-transparent lg:space-x-12">
+                        {navigation.map((item) => (
+                            <li id='sidebar' key={item.name}>
+                                <NavLink to={item.href} className=" text-sm font-semibold rounded flex justify-center py-3 md:px-3 md:py-2 hover:bg-[#88C123] hover:text-white md:hover:bg-white md:hover:text-black ease-linear duration-150">
+                                    {item.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </nav>
         </div>

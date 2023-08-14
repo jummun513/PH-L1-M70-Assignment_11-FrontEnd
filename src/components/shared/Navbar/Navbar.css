@@ -2,10 +2,16 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-#sidebar a.active {
-    background-color: white;
-    color: black;
+#sidebar li a {
+    width: 100%;
 }
 
+#sidebar a.active {}
 
-@media screen and (min-width:960px) {}
+
+@media screen and (min-width:768px) {
+    #sidebar a.active {
+        background-color: white;
+        color: black;
+    }
+}
