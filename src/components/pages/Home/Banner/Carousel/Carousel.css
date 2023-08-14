@@ -13,5 +13,3 @@
     object-position: center;
     transition: 200ms display ease-in-out;
 }
-
-@media screen and (max-width: 400px) {}
