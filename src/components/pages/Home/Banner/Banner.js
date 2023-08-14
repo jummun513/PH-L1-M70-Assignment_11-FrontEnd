@@ -15,7 +15,7 @@ const Banner = () => {
                 <Navbar></Navbar>
             </div>
             <div>
-                {/* <Carousel data={data.slides}></Carousel> */}
+                <Carousel data={data.slides}></Carousel>
             </div>
         </div>
     );

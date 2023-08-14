@@ -2,16 +2,8 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-#sidebar li a {
-    width: 100%;
-}
-
-#sidebar a.active {}
-
-
 @media screen and (min-width:768px) {
     #sidebar a.active {
-        background-color: white;
-        color: black;
+        background-color: #88C123;
     }
 }
