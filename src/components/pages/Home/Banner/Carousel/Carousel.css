@@ -1,15 +1,17 @@
 #carousel {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 8rem);
+}
+
+#carousel .carousel-image {
+    width: 80%;
 }
 
 #carousel .slide {
-    width: 100%;
-    height: 100%;
-}
-
-#carousel .slide-hidden {
-    display: none;
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms display ease-in-out;
 }
 
 @media screen and (max-width: 400px) {}

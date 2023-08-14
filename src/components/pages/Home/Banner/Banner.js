@@ -10,7 +10,7 @@ const Banner = () => {
     // console.log(carData);
     return (
         <div className='svg-container'>
-            <div>
+            <div className="relative bottom-0">
                 <Carousel data={data.slides}></Carousel>
             </div>
         </div>
