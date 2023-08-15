@@ -14,7 +14,7 @@ const Navbar = () => {
     const [navtoggle, setNavToggle] = useState(false);
 
     return (
-        <div className='absolute z-10 top-0 px-2 md:px-0 w-full'>
+        <div className='absolute z-10 px-2 md:px-0 w-full'>
             <div className="bg-transparent hidden xl:max-w-screen-xl xxl:max-w-screen-xxl mx-auto xl:flex items-center justify-between py-5">
                 <div className='md:flex justify-between md:w-1/3'>
                     <p className="text-sm text-gray-200 hover:underline ease-linear duration-150"><a href="/" className="">+88-01794-094122</a></p>
@@ -38,7 +38,7 @@ const Navbar = () => {
                     </a>
                 </div>
             </div>
-            <nav className="bg-transparent md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl pt-4 xl:pt-0 flex flex-wrap items-center justify-between mx-auto">
+            <nav className="bg-transparent xxl:mt-3 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl pt-4 xl:pt-0 flex flex-wrap items-center justify-between mx-auto">
                 <a href="/" className="flex items-center">
                     <img className='w-24 md:w-40' src={url} alt="" />
                 </a>

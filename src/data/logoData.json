@@ -1,0 +1,144 @@
+{
+    "items": [
+        {
+            "src": "https://i.ibb.co/4swD7FC/logo2.png",
+            "keyword": "toyota",
+            "alt": "Logo 1"
+        },
+        {
+            "src": "https://i.ibb.co/X22YQMX/logo3.png",
+            "keyword": "mercedes-benz",
+            "alt": "Logo 2"
+        },
+        {
+            "src": "https://i.ibb.co/8Ks3H7c/logo4.png",
+            "keyword": "ferrari",
+            "alt": "Logo 3"
+        },
+        {
+            "src": "https://i.ibb.co/N3Wz3KR/logo5.png",
+            "keyword": "ford",
+            "alt": "Logo 4"
+        },
+        {
+            "src": "https://i.ibb.co/x3N7t1N/logo6.png",
+            "keyword": "honda",
+            "alt": "Logo 5"
+        },
+        {
+            "src": "https://i.ibb.co/yhk1wwY/logo7.png",
+            "keyword": "bajaj",
+            "alt": "Logo 6"
+        },
+        {
+            "src": "https://i.ibb.co/nQHwPfq/logo8.png",
+            "keyword": "mahindra",
+            "alt": "Logo 7"
+        },
+        {
+            "src": "https://i.ibb.co/LtjVHmd/logo9.png",
+            "keyword": "audi",
+            "alt": "Logo 8"
+        },
+        {
+            "src": "https://i.ibb.co/26KxgVG/logo10.png",
+            "keyword": "nissan",
+            "alt": "Logo 9"
+        },
+        {
+            "src": "https://i.ibb.co/17m41ss/logo11.png",
+            "keyword": "suzuki",
+            "alt": "Logo 10"
+        },
+        {
+            "src": "https://i.ibb.co/jHzmkkP/logo12.png",
+            "keyword": "lexus",
+            "alt": "Logo 11"
+        },
+        {
+            "src": "https://i.ibb.co/XpmyB3W/logo13.png",
+            "keyword": "bmw",
+            "alt": "Logo 12"
+        },
+        {
+            "src": "https://i.ibb.co/92S5gWV/logo14.png",
+            "keyword": "fiat",
+            "alt": "Logo 13"
+        },
+        {
+            "src": "https://i.ibb.co/jWk9130/logo15.png",
+            "keyword": "volkswagen",
+            "alt": "Logo 14"
+        },
+        {
+            "src": "https://i.ibb.co/XC8Jgz6/logo16.png",
+            "keyword": "mazda",
+            "alt": "Logo 15"
+        },
+        {
+            "src": "https://i.ibb.co/9N62rN6/logo17.png",
+            "keyword": "dodge",
+            "alt": "Logo 16"
+        },
+        {
+            "src": "https://i.ibb.co/4VsmTfH/logo18.png",
+            "keyword": "jeep",
+            "alt": "Logo 17"
+        },
+        {
+            "src": "https://i.ibb.co/4RGxbRM/logo19.png",
+            "keyword": "land rover",
+            "alt": "Logo 18"
+        },
+        {
+            "src": "https://i.ibb.co/82G7Gxq/logo20.png",
+            "keyword": "chevrolet",
+            "alt": "Logo 19"
+        },
+        {
+            "src": "https://i.ibb.co/RgT3Yjv/logo21.png",
+            "keyword": "subaru",
+            "alt": "Logo 20"
+        },
+        {
+            "src": "https://i.ibb.co/qpKtn2d/logo22.png",
+            "keyword": "volvo",
+            "alt": "Logo 21"
+        },
+        {
+            "src": "https://i.ibb.co/9TrJ3Tr/logo23.png",
+            "keyword": "mitsubishi",
+            "alt": "Logo 22"
+        },
+        {
+            "src": "https://i.ibb.co/CbCmhPq/logo24.png",
+            "keyword": "jaguar",
+            "alt": "Logo 23"
+        },
+        {
+            "src": "https://i.ibb.co/qpxXLZD/logo25.png",
+            "keyword": "hyundai",
+            "alt": "Logo 24"
+        },
+        {
+            "src": "https://i.ibb.co/C0QVnqg/logo26.png",
+            "keyword": "hino",
+            "alt": "Logo 25"
+        },
+        {
+            "src": "https://i.ibb.co/DzvKv9z/logo.png",
+            "keyword": "lamborghini",
+            "alt": "Logo 26"
+        },
+        {
+            "src": "https://i.ibb.co/zrvD8TG/logo1.png",
+            "keyword": "foton",
+            "alt": "Logo 27"
+        },
+        {
+            "src": "https://i.ibb.co/LPDd3Zj/tesla-logo.png",
+            "keyword": "tesla",
+            "alt": "Logo 28"
+        }
+    ]
+}

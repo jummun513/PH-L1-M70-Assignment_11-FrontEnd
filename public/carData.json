@@ -1,12 +1,292 @@
 [
     {
+        "car": "Tesla",
+        "car_model": "Model X",
+        "car_color": "White",
+        "car_model_year": 2016,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx1",
+        "img": "https://i.ibb.co/hWhXGs4/tesla.png"
+    },
+    {
+        "car": "Lamborghini",
+        "car_model": "Aventador Sports car",
+        "car_color": "Orange",
+        "car_model_year": 2013,
+        "price": "$1542.48",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx2",
+        "img": "https://i.ibb.co/fGmyHPn/lamborghini.png"
+    },
+    {
+        "car": "Hyundai",
+        "car_model": "Chevrolet Prisma",
+        "car_color": "Blue",
+        "car_model_year": 2018,
+        "price": "$1021.21",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx3",
+        "img": "https://i.ibb.co/wwm16MC/hyundai.png"
+    },
+    {
+        "car": "Jaguar",
+        "car_model": "Jaguar XF",
+        "car_color": "Black",
+        "car_model_year": 2014,
+        "price": "$1457.22",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx4",
+        "img": "https://i.ibb.co/yVBWjr6/jaguar.png"
+    },
+    {
+        "car": "Mercedes-Benz",
+        "car_model": "Sprinter Car",
+        "car_color": "Green",
+        "car_model_year": 2018,
+        "price": "$1412.36",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx5",
+        "img": "https://i.ibb.co/rvpZpSf/mercedes.png"
+    },
+    {
+        "car": "BMW",
+        "car_model": "5 Series",
+        "car_color": "Bark Blue",
+        "car_model_year": 2015,
+        "price": "$1558.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx6",
+        "img": "https://i.ibb.co/ZBwN1QS/bmw.png"
+    },
+    {
+        "car": "Land Rover",
+        "car_model": "Evoque Rover",
+        "car_color": "Orange",
+        "car_model_year": 2018,
+        "price": "$1954.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx7",
+        "img": "https://i.ibb.co/ZJtjqNx/land.png"
+    },
+    {
+        "car": "Foton",
+        "car_model": "N Tunland",
+        "car_color": "Gray",
+        "car_model_year": 2016,
+        "price": "$1558.29",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx8",
+        "img": "https://i.ibb.co/tCz2XKL/foton.png"
+    },
+    {
+        "car": "Chevrolet",
+        "car_model": "Camaro Bumblebee",
+        "car_color": "Yellow",
+        "car_model_year": 2012,
+        "price": "$1527.97",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx9",
+        "img": "https://i.ibb.co/b3bQqvJ/chevrolet.png"
+    },
+    {
+        "car": "Volvo",
+        "car_model": "XC60 AB",
+        "car_color": "Bark Blue",
+        "car_model_year": 2018,
+        "price": "$1154.21",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx10",
+        "img": "https://i.ibb.co/93cJypv/volvo.png"
+    },
+    {
+        "car": "Mitsubishi",
+        "car_model": "Xpander SUV",
+        "car_color": "Gray",
+        "car_model_year": 2018,
+        "price": "$1188.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx11",
+        "img": "https://i.ibb.co/c8Kx68b/mitsubishi.png"
+    },
+    {
+        "car": "Jeep",
+        "car_model": "Wrangler CJ",
+        "car_color": "Red",
+        "car_model_year": 2007,
+        "price": "$1119.19",
+        "availability": false,
+        "_id": "64d7c78bb6466eefa1451edx12",
+        "img": "https://i.ibb.co/k1n73tL/jeep.png"
+    },
+    {
+        "car": "Dodge",
+        "car_model": "Challenger Chrysler",
+        "car_color": "Red",
+        "car_model_year": 2016,
+        "price": "$1163.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx13",
+        "img": "https://i.ibb.co/54n6M0p/dodge.png"
+    },
+    {
+        "car": "Subaru",
+        "car_model": "Impreza WRX STI",
+        "car_color": "Blue",
+        "car_model_year": 2018,
+        "price": "$1028.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx14",
+        "img": "https://i.ibb.co/wymNGsr/subaru.png"
+    },
+    {
+        "car": "Mazda",
+        "car_model": "MX-5 Miata",
+        "car_color": "Red",
+        "car_model_year": 2016,
+        "price": "$1124.74",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx15",
+        "img": "https://i.ibb.co/Lv6Gz2S/mazda.png"
+    },
+    {
+        "car": "Hino",
+        "car_model": "Contessa 1300",
+        "car_color": "Light Blue",
+        "car_model_year": 1961,
+        "price": "$1258.99",
+        "availability": false,
+        "_id": "64d7c78bb6466eefa1451edx16",
+        "img": "https://i.ibb.co/yk285zT/hino.png"
+    },
+    {
+        "car": "Volkswagen",
+        "car_model": "Golf GTI",
+        "car_color": "Red",
+        "car_model_year": 2017,
+        "price": "$1035.12",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx17",
+        "img": "https://i.ibb.co/9Hqttw6/volkswagen.png"
+    },
+    {
+        "car": "Lexus",
+        "car_model": "GS",
+        "car_color": "White",
+        "car_model_year": 2016,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx18",
+        "img": "https://i.ibb.co/3TnN4ks/lexus.png"
+    },
+    {
+        "car": "Suzuki",
+        "car_model": "Swift Maruti",
+        "car_color": "Blue",
+        "car_model_year": 2016,
+        "price": "$1111.65",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx19",
+        "img": "https://i.ibb.co/92Y7kbw/suzuki.png"
+    },
+    {
+        "car": "Nissan",
+        "car_model": "GT-R",
+        "car_color": "Orange",
+        "car_model_year": 2017,
+        "price": "$1131.12",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx20",
+        "img": "https://i.ibb.co/GxccG34/nissan.png"
+    },
+    {
+        "car": "Audi",
+        "car_model": "R8",
+        "car_color": "Black",
+        "car_model_year": 2018,
+        "price": "$1231.25",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx21",
+        "img": "https://i.ibb.co/bRJwLz3/audi.png"
+    },
+    {
+        "car": "Mahindra",
+        "car_model": "Scorpio",
+        "car_color": "Black",
+        "car_model_year": 2018,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx22",
+        "img": "https://i.ibb.co/rbWJ3Lq/mahindra.png"
+    },
+    {
+        "car": "Bajaj",
+        "car_model": "Compact van",
+        "car_color": "Red",
+        "car_model_year": 2016,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx23",
+        "img": "https://i.ibb.co/7rxCMNr/bajaj.png"
+    },
+    {
+        "car": "Honda",
+        "car_model": "Civic",
+        "car_color": "Dark Gray",
+        "car_model_year": 2017,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx24",
+        "img": "https://i.ibb.co/fFppr99/honda.png"
+    },
+    {
+        "car": "Ford",
+        "car_model": "Mustang",
+        "car_color": "Black",
+        "car_model_year": 2019,
+        "price": "$1465.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx25",
+        "img": "https://i.ibb.co/3N39WGD/ford.png"
+    },
+    {
+        "car": "Ferrari",
+        "car_model": "Portofino",
+        "car_color": "Red",
+        "car_model_year": 2018,
+        "price": "$1615.24",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx26",
+        "img": "https://i.ibb.co/jztztjJ/ferrari.png"
+    },
+    {
+        "car": "Toyota",
+        "car_model": "Yaris",
+        "car_color": "Red",
+        "car_model_year": 2018,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451edx27",
+        "img": "https://i.ibb.co/Y7NL1Dt/toyota.png"
+    },
+    {
+        "car": "Tesla",
+        "car_model": "Model X 2016",
+        "car_color": "White",
+        "car_model_year": 2016,
+        "price": "$1258.99",
+        "availability": true,
+        "_id": "64d7c78bb6466eefa1451ed7",
+        "img": "https://i.ibb.co/h9P5pKP/pngegg-1.png"
+    },
+    {
         "car": "BMW",
         "car_model": "6 Series",
         "car_color": "Purple",
         "car_model_year": 2008,
         "price": "$1258.99",
         "availability": true,
-        "_id": "64d7c78bb6466eefa1451ed7",
+        "_id": "64d7c78bb6466eefa1451edx29",
         "img": "https://i.ibb.co/h9P5pKP/pngegg-1.png"
     },
     {

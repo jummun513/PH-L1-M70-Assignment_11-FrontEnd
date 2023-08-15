@@ -5,6 +5,7 @@ import Inventory from './components/pages/Inventory/Inventory';
 import Blogs from './components/pages/Blogs/Blogs';
 import About from './components/pages/About/About';
 
+
 function App() {
   return (
     <Routes>

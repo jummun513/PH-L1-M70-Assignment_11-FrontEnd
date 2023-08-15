@@ -7,8 +7,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ebf2fe;
+  background-color: #eff5ff;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 h1 {
