@@ -19,7 +19,7 @@ const LogoSlider = ({ data }) => {
                 </div>
             </div>
             <div id='container' className='my-4 md:my-10 py-3 md:py-5'>
-                <div class="logos-slide">
+                <div className="logos-slide">
                     {
                         shortData.map((item, idx) => {
                             return (

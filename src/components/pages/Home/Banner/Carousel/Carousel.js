@@ -21,7 +21,7 @@ const Carousel = ({ data }) => {
             <div className='carousel-image'>
                 {data.map((item, idx) => {
                     return (
-                        <div className='flex flex-col justify-center items-center'>
+                        <div key={idx} className='flex flex-col justify-center items-center'>
                             <h1 className={slide === idx ? "block text-base text-center xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-2 sm:pb-3 md:pb-4 lg:pb-6 font-bold text-white" : "hidden"}>{item.heading}</h1>
                             <p className={slide === idx ? "block text-xs text-center sm:text-sm md:text-base pb-2 sm:pb-3 lg:pb-5 font-medium text-white" : "hidden"}><span className='text-[#faa03f]'>$395 Per Months</span> 0% ARP Representative</p>
                             <div className={slide === idx ? "flex pb-10" : "hidden"}>

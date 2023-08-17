@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const useFetchData = (param) => {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const options = {
@@ -17,16 +18,19 @@ const useFetchData = (param) => {
 
         const fetchData = async () => {
             try {
+                setLoading(true);
                 const response = await axios.request(options);
                 setData(response.data);
+                setLoading(false);
             } catch (error) {
                 console.error(error);
+                setLoading(false);
             }
         }
         fetchData();
-    }, []);
+    }, [param]);
 
-    return [data, setData];
+    return [data, loading, setData];
 }
 
 export default useFetchData;

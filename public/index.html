@@ -3,17 +3,48 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <title>Auto | Hive - A Car Dealer Company.</title>
+  <title>Auto Hive | A Car Dealer Company.</title>
 </head>
+<style>
+  #spinner {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #spinner #loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #87c12345;
+    border-top: 10px solid #88C123;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="spinner">
+    <div id="loading-spinner">
+    </div>
+  </div>
+  <div id="root">
+  </div>
 </body>
 
 </html>
