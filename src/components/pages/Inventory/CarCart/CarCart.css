@@ -1,0 +1,24 @@
+#cart {
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+#cart .cart-img-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #87c12317;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.436);
+    padding: 20px;
+}
+
+#cart .cart-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+    object-position: center;
+    object-fit: cover;
+}
