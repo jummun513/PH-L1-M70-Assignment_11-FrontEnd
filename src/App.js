@@ -6,6 +6,7 @@ import Inventory from './components/pages/Inventory/Inventory';
 import Blogs from './components/pages/Blogs/Blogs';
 import About from './components/pages/About/About';
 import NotFound from './components/shared/NotFound/NotFound';
+import AddOne from './components/pages/AddOne/AddOne';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path='/inventory' element={<Inventory></Inventory>}></Route>
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/about' element={<About></About>}></Route>
+      <Route path='/add-items' element={<AddOne></AddOne>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
   );

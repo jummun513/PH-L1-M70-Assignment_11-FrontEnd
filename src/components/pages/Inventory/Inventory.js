@@ -9,6 +9,7 @@ const Inventory = () => {
     const [cars, loading, setCars] = useFetchData('http://localhost:5000/cars');
     const [isLiked, setLiked] = useState(false);
     const [isWished, setWished] = useState(false);
+    const user = false;
 
     return (
         <div className='svg-container'>
@@ -17,7 +18,7 @@ const Inventory = () => {
                 <h1 className='text-[#88C123] text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>All Listing Cars</h1>
                 <div id='cart-container' className='gap-7 mt-10 md:mt-20'>
                     {
-                        loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished}></CarCart>))
+                        loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished} user={user}></CarCart>))
                     }
                 </div>
             </div>

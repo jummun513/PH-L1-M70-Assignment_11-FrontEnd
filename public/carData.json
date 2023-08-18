@@ -1,5 +1,6 @@
 [
     {
+        "quantity": "5",
         "car": "Tesla",
         "car_model": "Model X",
         "car_color": "White",
@@ -10,6 +11,7 @@
         "img": "https://i.ibb.co/hWhXGs4/tesla.png"
     },
     {
+        "quantity": "5",
         "car": "Lamborghini",
         "car_model": "Aventador Sports car",
         "car_color": "Orange",
@@ -20,6 +22,7 @@
         "img": "https://i.ibb.co/fGmyHPn/lamborghini.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Chevrolet Prisma",
         "car_color": "Blue",
@@ -30,6 +33,7 @@
         "img": "https://i.ibb.co/wwm16MC/hyundai.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "Jaguar XF",
         "car_color": "Black",
@@ -40,6 +44,7 @@
         "img": "https://i.ibb.co/yVBWjr6/jaguar.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "Sprinter Car",
         "car_color": "Green",
@@ -50,6 +55,7 @@
         "img": "https://i.ibb.co/rvpZpSf/mercedes.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "5 Series",
         "car_color": "Bark Blue",
@@ -60,6 +66,7 @@
         "img": "https://i.ibb.co/ZBwN1QS/bmw.png"
     },
     {
+        "quantity": "5",
         "car": "Land Rover",
         "car_model": "Evoque Rover",
         "car_color": "Orange",
@@ -70,6 +77,7 @@
         "img": "https://i.ibb.co/ZJtjqNx/land.png"
     },
     {
+        "quantity": "5",
         "car": "Foton",
         "car_model": "N Tunland",
         "car_color": "Gray",
@@ -80,6 +88,7 @@
         "img": "https://i.ibb.co/tCz2XKL/foton.png"
     },
     {
+        "quantity": "5",
         "car": "Chevrolet",
         "car_model": "Camaro Bumblebee",
         "car_color": "Yellow",
@@ -90,6 +99,7 @@
         "img": "https://i.ibb.co/b3bQqvJ/chevrolet.png"
     },
     {
+        "quantity": "5",
         "car": "Volvo",
         "car_model": "XC60 AB",
         "car_color": "Bark Blue",
@@ -100,6 +110,7 @@
         "img": "https://i.ibb.co/93cJypv/volvo.png"
     },
     {
+        "quantity": "5",
         "car": "Mitsubishi",
         "car_model": "Xpander SUV",
         "car_color": "Gray",
@@ -110,6 +121,7 @@
         "img": "https://i.ibb.co/c8Kx68b/mitsubishi.png"
     },
     {
+        "quantity": "5",
         "car": "Jeep",
         "car_model": "Wrangler CJ",
         "car_color": "Red",
@@ -120,6 +132,7 @@
         "img": "https://i.ibb.co/k1n73tL/jeep.png"
     },
     {
+        "quantity": "5",
         "car": "Dodge",
         "car_model": "Challenger Chrysler",
         "car_color": "Red",
@@ -130,6 +143,7 @@
         "img": "https://i.ibb.co/54n6M0p/dodge.png"
     },
     {
+        "quantity": "5",
         "car": "Subaru",
         "car_model": "Impreza WRX STI",
         "car_color": "Blue",
@@ -140,6 +154,7 @@
         "img": "https://i.ibb.co/wymNGsr/subaru.png"
     },
     {
+        "quantity": "5",
         "car": "Mazda",
         "car_model": "MX-5 Miata",
         "car_color": "Red",
@@ -150,6 +165,7 @@
         "img": "https://i.ibb.co/Lv6Gz2S/mazda.png"
     },
     {
+        "quantity": "5",
         "car": "Hino",
         "car_model": "Contessa 1300",
         "car_color": "Light Blue",
@@ -160,6 +176,7 @@
         "img": "https://i.ibb.co/yk285zT/hino.png"
     },
     {
+        "quantity": "5",
         "car": "Volkswagen",
         "car_model": "Golf GTI",
         "car_color": "Red",
@@ -170,6 +187,7 @@
         "img": "https://i.ibb.co/9Hqttw6/volkswagen.png"
     },
     {
+        "quantity": "5",
         "car": "Lexus",
         "car_model": "GS",
         "car_color": "White",
@@ -180,6 +198,7 @@
         "img": "https://i.ibb.co/3TnN4ks/lexus.png"
     },
     {
+        "quantity": "5",
         "car": "Suzuki",
         "car_model": "Swift Maruti",
         "car_color": "Blue",
@@ -190,6 +209,7 @@
         "img": "https://i.ibb.co/92Y7kbw/suzuki.png"
     },
     {
+        "quantity": "5",
         "car": "Nissan",
         "car_model": "GT-R",
         "car_color": "Orange",
@@ -200,6 +220,7 @@
         "img": "https://i.ibb.co/GxccG34/nissan.png"
     },
     {
+        "quantity": "5",
         "car": "Audi",
         "car_model": "R8",
         "car_color": "Black",
@@ -210,6 +231,7 @@
         "img": "https://i.ibb.co/bRJwLz3/audi.png"
     },
     {
+        "quantity": "5",
         "car": "Mahindra",
         "car_model": "Scorpio",
         "car_color": "Black",
@@ -220,6 +242,7 @@
         "img": "https://i.ibb.co/rbWJ3Lq/mahindra.png"
     },
     {
+        "quantity": "5",
         "car": "Bajaj",
         "car_model": "Compact van",
         "car_color": "Red",
@@ -230,6 +253,7 @@
         "img": "https://i.ibb.co/7rxCMNr/bajaj.png"
     },
     {
+        "quantity": "5",
         "car": "Honda",
         "car_model": "Civic",
         "car_color": "Dark Gray",
@@ -240,6 +264,7 @@
         "img": "https://i.ibb.co/fFppr99/honda.png"
     },
     {
+        "quantity": "5",
         "car": "Ford",
         "car_model": "Mustang",
         "car_color": "Black",
@@ -250,6 +275,7 @@
         "img": "https://i.ibb.co/3N39WGD/ford.png"
     },
     {
+        "quantity": "5",
         "car": "Ferrari",
         "car_model": "Portofino",
         "car_color": "Red",
@@ -260,6 +286,7 @@
         "img": "https://i.ibb.co/jztztjJ/ferrari.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Yaris",
         "car_color": "Red",
@@ -270,6 +297,7 @@
         "img": "https://i.ibb.co/Y7NL1Dt/toyota.png"
     },
     {
+        "quantity": "5",
         "car": "Tesla",
         "car_model": "Model X 2016",
         "car_color": "White",
@@ -280,6 +308,7 @@
         "img": "https://i.ibb.co/h9P5pKP/pngegg-1.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "6 Series",
         "car_color": "Purple",
@@ -290,6 +319,7 @@
         "img": "https://i.ibb.co/h9P5pKP/pngegg-1.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Teal",
@@ -300,6 +330,7 @@
         "img": "https://i.ibb.co/1vHcfGJ/pngegg-3.png"
     },
     {
+        "quantity": "5",
         "car": "Tesla",
         "car_model": "Model S",
         "car_color": "Khaki",
@@ -310,6 +341,7 @@
         "img": "https://i.ibb.co/DG8D5xN/pngegg-4.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "645",
         "car_color": "Blue",
@@ -320,6 +352,7 @@
         "img": "https://i.ibb.co/RYZV8FL/pngegg-5.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XJ",
         "car_color": "Orange",
@@ -330,6 +363,7 @@
         "img": "https://i.ibb.co/qFYZhkd/pngegg-6.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "SL-Class",
         "car_color": "Aquamarine",
@@ -340,6 +374,7 @@
         "img": "https://i.ibb.co/w472GG8/pngegg-7.png"
     },
     {
+        "quantity": "5",
         "car": "Ford",
         "car_model": "Taurus",
         "car_color": "Mauv",
@@ -350,6 +385,7 @@
         "img": "https://i.ibb.co/nPMsNBd/pngegg-8.png"
     },
     {
+        "quantity": "5",
         "car": "Ferrari",
         "car_model": "F430",
         "car_color": "Pink",
@@ -360,6 +396,7 @@
         "img": "https://i.ibb.co/9yR0JSK/pngegg-9.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "Sprinter 3500",
         "car_color": "Maroon",
@@ -370,6 +407,7 @@
         "img": "https://i.ibb.co/rFv5cZ0/pngegg-10.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XK Series",
         "car_color": "Violet",
@@ -380,6 +418,7 @@
         "img": "https://i.ibb.co/Sym2FYN/pngegg-11.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "SLR McLaren",
         "car_color": "Orange",
@@ -390,6 +429,7 @@
         "img": "https://i.ibb.co/mFxKQGJ/pngegg-12.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "3 Series",
         "car_color": "Green",
@@ -400,6 +440,7 @@
         "img": "https://i.ibb.co/khcg0nb/pngegg-14.png"
     },
     {
+        "quantity": "5",
         "car": "Ford",
         "car_model": "F250",
         "car_color": "Teal",
@@ -410,6 +451,7 @@
         "img": "https://i.ibb.co/9qhJH0M/pngegg-15.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "M5",
         "car_color": "Crimson",
@@ -420,6 +462,7 @@
         "img": "https://i.ibb.co/0yhBYrV/pngegg-16.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XK Series",
         "car_color": "Purple",
@@ -430,6 +473,7 @@
         "img": "https://i.ibb.co/Pm067dV/pngegg-17.png"
     },
     {
+        "quantity": "5",
         "car": "Ferrari",
         "car_model": "612 Scaglietti",
         "car_color": "Goldenrod",
@@ -440,6 +484,7 @@
         "img": "https://i.ibb.co/VM82dTK/pngegg-18.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "300E",
         "car_color": "Blue",
@@ -450,6 +495,7 @@
         "img": "https://i.ibb.co/2yrWZM7/pngegg-19.png"
     },
     {
+        "quantity": "5",
         "car": "GMC",
         "car_model": "Safari",
         "car_color": "Goldenrod",
@@ -460,6 +506,7 @@
         "img": "https://i.ibb.co/XFYZ8Ld/pngegg-20.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "X5 M",
         "car_color": "Mauv",
@@ -470,6 +517,7 @@
         "img": "https://i.ibb.co/6rKsZNT/pngegg-21.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XF",
         "car_color": "Yellow",
@@ -480,6 +528,7 @@
         "img": "https://i.ibb.co/hdbQ96F/pngegg-22.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Orange",
@@ -490,6 +539,7 @@
         "img": "https://i.ibb.co/9yR0JSK/pngegg-9.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XJ Series",
         "car_color": "Violet",
@@ -500,6 +550,7 @@
         "img": "https://i.ibb.co/NxtbdFd/pngegg-24.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "G-Class",
         "car_color": "Violet",
@@ -510,6 +561,7 @@
         "img": "https://i.ibb.co/HTgssjn/pngegg-25.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "5 Series",
         "car_color": "Goldenrod",
@@ -520,6 +572,7 @@
         "img": "https://i.ibb.co/H4fNQLj/pngegg-26.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Goldenrod",
@@ -530,6 +583,7 @@
         "img": "https://i.ibb.co/F6z3FdT/pngegg-27.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "S-Type",
         "car_color": "Maroon",
@@ -540,6 +594,7 @@
         "img": "https://i.ibb.co/WvR24Tt/pngegg-28.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -550,6 +605,7 @@
         "img": "https://i.ibb.co/vJSqRzQ/pngegg-30.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -560,6 +616,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "E-Class",
         "car_color": "Maroon",
@@ -570,6 +627,7 @@
         "img": "https://i.ibb.co/GtPWCLX/pngegg-34.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "M6",
         "car_color": "Teal",
@@ -589,6 +647,7 @@
         "img": "https://i.ibb.co/tZg8pxS/pngegg-36.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Sonata",
         "car_color": "Green",
@@ -599,6 +658,7 @@
         "img": "https://i.ibb.co/0BQp3dv/pngegg-37.png"
     },
     {
+        "quantity": "5",
         "car": "Jaguar",
         "car_model": "XJ Series",
         "car_color": "Orange",
@@ -609,6 +669,7 @@
         "img": "https://i.ibb.co/VDcqGpS/pngegg-38.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Accent",
         "car_color": "Pink",
@@ -619,6 +680,7 @@
         "img": "https://i.ibb.co/JvK9Gmt/pngegg-39.png"
     },
     {
+        "quantity": "5",
         "car": "Mercedes-Benz",
         "car_model": "W201",
         "car_color": "Orange",
@@ -629,6 +691,7 @@
         "img": "https://i.ibb.co/0hYGXtZ/pngegg-40.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Elantra",
         "car_color": "Turquoise",
@@ -639,6 +702,7 @@
         "img": "https://i.ibb.co/Y2BdMFv/pngegg-41.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -649,6 +713,7 @@
         "img": "https://i.ibb.co/2N1M0MY/pngegg-42.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -659,6 +724,7 @@
         "img": "https://i.ibb.co/Q7wgLS3/pngegg-43.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "Z4",
         "car_color": "Khaki",
@@ -669,6 +735,7 @@
         "img": "https://i.ibb.co/BqV9GJq/pngegg-49.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -679,6 +746,7 @@
         "img": "https://i.ibb.co/XZRycG0/pngegg-48.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -689,6 +757,7 @@
         "img": "https://i.ibb.co/Sym2FYN/pngegg-11.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Tucson",
         "car_color": "Puce",
@@ -699,6 +768,7 @@
         "img": "https://i.ibb.co/wwTcXJD/pngegg-45.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -709,6 +779,7 @@
         "img": "https://i.ibb.co/BZbDkMC/pngegg-50.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -719,6 +790,7 @@
         "img": "https://i.ibb.co/NrK6H8y/pngegg-44.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -729,6 +801,7 @@
         "img": "https://i.ibb.co/4mqf1KK/pngegg-52.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -739,6 +812,7 @@
         "img": "https://i.ibb.co/P6p6DdJ/pngegg-54.png"
     },
     {
+        "quantity": "5",
         "car": "Toyota",
         "car_model": "Camry Hybrid",
         "car_color": "Turquoise",
@@ -749,6 +823,7 @@
         "img": "https://i.ibb.co/XFYZ8Ld/pngegg-20.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Veracruz",
         "car_color": "Puce",
@@ -759,6 +834,7 @@
         "img": "https://i.ibb.co/B32SMzk/pngegg-58.png"
     },
     {
+        "quantity": "5",
         "car": "Mitsubishi",
         "car_model": "GTO",
         "car_color": "Purple",
@@ -769,6 +845,7 @@
         "img": "https://i.ibb.co/dWgWHRN/pngegg-56.png"
     },
     {
+        "quantity": "5",
         "car": "Mazda",
         "car_model": "Mazda5",
         "car_color": "Red",
@@ -779,6 +856,7 @@
         "img": "https://i.ibb.co/bmZvxCx/pngegg-55.png"
     },
     {
+        "quantity": "5",
         "car": "Mazda",
         "car_model": "Mazda5",
         "car_color": "Red",
@@ -789,6 +867,7 @@
         "img": "https://i.ibb.co/gJvnV1g/pngegg-62.png"
     },
     {
+        "quantity": "5",
         "car": "Audi",
         "car_model": "Q7",
         "car_color": "Pink",
@@ -799,6 +878,7 @@
         "img": "https://i.ibb.co/9s8MnVS/pngegg-59.png"
     },
     {
+        "quantity": "5",
         "car": "Volvo",
         "car_model": "C70",
         "car_color": "Red",
@@ -809,6 +889,7 @@
         "img": "https://i.ibb.co/gSgPQph/pngegg-57.png"
     },
     {
+        "quantity": "5",
         "car": "Volvo",
         "car_model": "C70",
         "car_color": "Red",
@@ -819,6 +900,7 @@
         "img": "https://i.ibb.co/B32SMzk/pngegg-58.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "3 Series",
         "car_color": "Crimson",
@@ -829,6 +911,7 @@
         "img": "https://i.ibb.co/NVyWGb6/pngegg-64.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Veloster",
         "car_color": "Indigo",
@@ -839,6 +922,7 @@
         "img": "https://i.ibb.co/R3CzpD2/pngegg-65.png"
     },
     {
+        "quantity": "5",
         "car": "Volvo",
         "car_model": "C70",
         "car_color": "Red",
@@ -849,6 +933,7 @@
         "img": "https://i.ibb.co/WB7s9sm/pngegg-60.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "6 Series",
         "car_color": "Teal",
@@ -859,6 +944,7 @@
         "img": "https://i.ibb.co/rmHvn8J/pngegg-63.png"
     },
     {
+        "quantity": "5",
         "car": "Suzuki",
         "car_model": "Swift",
         "car_color": "Green",
@@ -869,6 +955,7 @@
         "img": "https://i.ibb.co/FB0fwgm/pngegg-68.png"
     },
     {
+        "quantity": "5",
         "car": "Suzuki",
         "car_model": "Swift",
         "car_color": "Green",
@@ -879,6 +966,7 @@
         "img": "https://i.ibb.co/Zxthw0m/pngegg-70.png"
     },
     {
+        "quantity": "5",
         "car": "Suzuki",
         "car_model": "Swift",
         "car_color": "Green",
@@ -889,6 +977,7 @@
         "img": "https://i.ibb.co/LJyf1X4/pngegg-67.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "M5",
         "car_color": "Blue",
@@ -899,6 +988,7 @@
         "img": "https://i.ibb.co/Jxp2PBv/pngegg-47.png"
     },
     {
+        "quantity": "5",
         "car": "Land Rover",
         "car_model": "Discovery Series II",
         "car_color": "Orange",
@@ -909,6 +999,7 @@
         "img": "https://i.ibb.co/VBHdBGC/pngegg-69.png"
     },
     {
+        "quantity": "5",
         "car": "BMW",
         "car_model": "6 Series",
         "car_color": "Red",
@@ -919,6 +1010,7 @@
         "img": "https://i.ibb.co/mvPWD69/pngegg-2.png"
     },
     {
+        "quantity": "5",
         "car": "Land Rover",
         "car_model": "Discovery Series II",
         "car_color": "Orange",
@@ -929,6 +1021,7 @@
         "img": "https://i.ibb.co/LS1wv8N/pngegg-71.png"
     },
     {
+        "quantity": "5",
         "car": "Land Rover",
         "car_model": "Discovery Series II",
         "car_color": "Orange",
@@ -939,6 +1032,7 @@
         "img": "https://i.ibb.co/Yb9VrkN/pngegg.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -949,6 +1043,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -959,6 +1054,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -969,6 +1065,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -979,6 +1076,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -989,6 +1087,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -999,6 +1098,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1009,6 +1109,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1019,6 +1120,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1029,6 +1131,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1039,6 +1142,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1049,6 +1153,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1059,6 +1164,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1069,6 +1175,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1079,6 +1186,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1089,6 +1197,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1099,6 +1208,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1109,6 +1219,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1119,6 +1230,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1129,6 +1241,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1139,6 +1252,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1149,6 +1263,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1159,6 +1274,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1169,6 +1285,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1179,6 +1296,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1189,6 +1307,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1199,6 +1318,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1209,6 +1329,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1219,6 +1340,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1229,6 +1351,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1239,6 +1362,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1249,6 +1373,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1259,6 +1384,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1269,6 +1395,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1279,6 +1406,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
@@ -1289,6 +1417,7 @@
         "img": "https://i.ibb.co/ZNm1150/pngegg-32.png"
     },
     {
+        "quantity": "5",
         "car": "Hyundai",
         "car_model": "Santa Fe",
         "car_color": "Violet",
