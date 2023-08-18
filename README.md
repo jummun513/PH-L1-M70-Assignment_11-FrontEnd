@@ -1,4 +1,4 @@
-# Live link of the project
+# Auto Hive | A car dealer company project
 
 - Client Side Live Link: [https://classroom.github.com/a/Y0bAS9YS](https://classroom.github.com/a/Y0bAS9YS)
 - Server Side Live Link: [https://classroom.github.com/a/Y0bAS9YS](https://classroom.github.com/a/Y0bAS9YS)
@@ -12,5 +12,5 @@
 
 ### Some Features of the project
 
-![#88c123] The project have beautiful responsive header with `Navbar` and `Banner`\
-![#88c123] In the project have different 9 pages where some of are public and some of are protected by user login.
+`#88c123` The project have beautiful responsive header with `Navbar` and `Banner`\
+`#88c123` In the project have different 9 pages where some of are public and some of are protected by user login.
