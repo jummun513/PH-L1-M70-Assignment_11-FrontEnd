@@ -12,23 +12,31 @@ const AddOne = () => {
                     <form action="#" className='flex flex-col px-5 py-10 bg-[#fafafa] rounded-lg'>
                         <div class="mb-6">
                             <label for="manufacturer" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Manufacturer or Dealer Name</label>
-                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="manufacturer" id="manufacturer" required />
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="manufacturer" id="manufacturer" required placeholder='Tesla' />
                         </div>
                         <div class="mb-6">
-                            <label for="manufacturer" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Car Model</label>
-                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="car_model" id="car_model" required />
+                            <label for="car_model" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Car Model</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="car_model" id="car_model" placeholder='X series' required />
                         </div>
                         <div class="mb-6">
-                            <label for="manufacturer" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Car Color</label>
-                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="car_color" id="car_color" required />
+                            <label for="car-color" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Car Color</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="car_color" id="car_color" placeholder='Blue' required />
                         </div>
                         <div class="mb-6">
-                            <label for="manufacturer" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Single Price</label>
-                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="car_price" id="car_price" required />
+                            <label for="release" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Release Year</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="release" id="release" placeholder='2019' required />
                         </div>
                         <div class="mb-6">
-                            <label for="manufacturer" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Quantity</label>
-                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="quantity" id="quantity" required />
+                            <label for="car_price" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Single Item Price. (In US Dollar - $)</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="car_price" id="car_price" placeholder='1265.12' required />
+                        </div>
+                        <div class="mb-6">
+                            <label for="quantity" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Available Quantity</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="quantity" id="quantity" placeholder='10' required />
+                        </div>
+                        <div class="mb-6">
+                            <label for="img_link" class="md:text-base block mb-2 text-sm font-semibold text-gray-900">Image Hosting Link</label>
+                            <input className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="img_link" id="img_link" placeholder='https://i.ibb.co/ZBwN1QS/bmw.png' />
                         </div>
                         <div class="flex items-start mb-6">
                             <div class="flex items-center h-5">

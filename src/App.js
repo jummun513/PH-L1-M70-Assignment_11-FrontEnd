@@ -7,6 +7,7 @@ import Blogs from './components/pages/Blogs/Blogs';
 import About from './components/pages/About/About';
 import NotFound from './components/shared/NotFound/NotFound';
 import AddOne from './components/pages/AddOne/AddOne';
+import Loading from './components/shared/Loading/Loading';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/about' element={<About></About>}></Route>
       <Route path='/add-items' element={<AddOne></AddOne>}></Route>
+      <Route path='/loading' element={<Loading></Loading>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
   );

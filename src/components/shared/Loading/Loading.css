@@ -18,12 +18,12 @@
 }
 
 .spinner-container {
-    position: absolute;
+    position: relative;
     z-index: 1000;
     background: transparent;
     min-height: 100vh;
-    min-width: 100vw;
     display: flex;
-    justify-content: center;
+    max-width: 100vw;
     align-items: center;
+    justify-content: center;
 }
