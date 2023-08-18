@@ -5,7 +5,7 @@ const Blogs = () => {
     return (
         <div className='svg-container'>
             <div><Navbar></Navbar></div>
-            <h1>This is Blogs.</h1>
+            <h1>This is Blogs</h1>
         </div>
     );
 };

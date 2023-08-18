@@ -12,5 +12,5 @@
 
 ### Some Features of the project
 
-1. The project have beautiful responsive header with `Navbar` and `Banner`\
+1. The project have beautiful responsive header with `Navbar` and `Banner`
 2. In the project have different 9 pages where some of are public and some of are protected by user login.
