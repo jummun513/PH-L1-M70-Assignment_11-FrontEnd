@@ -1,0 +1,21 @@
+#footer {
+    background-image: url('../../../images/bottom-banner.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#footer .footer-container {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+
+@media screen and (max-height: 850px) {
+    #footer {
+        height: 120vh;
+    }
+}

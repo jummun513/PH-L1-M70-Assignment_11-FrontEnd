@@ -9,7 +9,7 @@ const Listing = () => {
     const [isWished, setWished] = useState(false);
     const user = false;
     return (
-        <div className='mt-32 md:mt-48 lg:mt-60 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto'>
+        <div className='mt-24 md:mt-36 lg:mt-48 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto'>
             <h1 className='text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl text-center'>Featured Listing</h1>
             <div id='cart-container' className='gap-7 mt-7 md:mt-14'>
                 {

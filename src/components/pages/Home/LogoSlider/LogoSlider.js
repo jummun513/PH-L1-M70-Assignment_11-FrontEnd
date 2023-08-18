@@ -6,7 +6,7 @@ const LogoSlider = ({ data }) => {
     const shortData = data.slice(0, 8);
 
     return (
-        <div id='logo-slider' className='md:mt-20 lg:mt-60 px-2 xsm:px-0 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto'>
+        <div id='logo-slider' className='md:mt-20 lg:mt-48 px-2 xsm:px-0 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto'>
             <div className='flex justify-between items-center'>
                 <div className='w-8/12'>
                     <h1 className='text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl md:pb-5'>

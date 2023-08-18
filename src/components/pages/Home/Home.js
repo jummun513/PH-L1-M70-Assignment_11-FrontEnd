@@ -5,6 +5,7 @@ import url from '../../../data/logoData.json';
 import Listing from './Listing/Listing';
 import Loading from '../../shared/Loading/Loading';
 import Footer from '../../shared/Footer/Footer';
+import Subscribe from './Subscribe/Subscribe';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <LogoSlider data={url.items}></LogoSlider>
             <Listing></Listing>
+            <Subscribe></Subscribe>
             <Footer></Footer>
         </div>
     );
