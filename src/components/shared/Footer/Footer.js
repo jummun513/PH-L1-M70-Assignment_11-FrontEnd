@@ -7,7 +7,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div id='footer' className='relative'>
+        <div id='footer' className='relative -z-10'>
             <div className='footer-container'>
                 <footer className="px-2 xsm:px-0 mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm">
                     <div className="md:flex justify-between">
@@ -62,7 +62,7 @@ const Footer = () => {
                     <hr className="my-6 mx-auto border-gray-700 md:my-8" />
                     <div className="flex md:flex-row flex-col-reverse items-center justify-between">
                         <p className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Developed By <a href="/" className="hover:underline text-[#88c123]">Jummun Islam</a></p>
-                        <p className="text-sm mb-1 md:mb-0 text-gray-500 sm:text-center dark:text-gray-400">&copy; {currentYear} <a href="/" className="hover:underline text-[#88c123]">Auto Hive™</a>. All Rights Reserved.
+                        <p className="text-sm mb-1 md:mb-0 text-gray-500 text-center dark:text-gray-400">&copy; {currentYear} <a href="/" className="hover:underline text-[#88c123]">Auto Hive™</a>. All Rights Reserved.
                         </p>
                         <div className="flex mb-2 md:mb-0 space-x-4 md:space-x-6 md:justify-start justify-center">
                             <a href="/" className="text-[#88c123] hover:text-white">

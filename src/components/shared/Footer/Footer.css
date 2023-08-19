@@ -19,3 +19,15 @@
         height: 120vh;
     }
 }
+
+@media screen and (max-height: 700px) {
+    #footer {
+        height: 140vh;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #footer {
+        height: 160vh;
+    }
+}

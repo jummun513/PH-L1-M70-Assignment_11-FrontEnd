@@ -4,6 +4,7 @@ import Loading from '../../shared/Loading/Loading';
 import CarCart from './CarCart/CarCart';
 import './Inventory.css';
 import { useState } from 'react';
+import Footer from '../../shared/Footer/Footer';
 
 const Inventory = () => {
     const [cars, loading, setCars] = useFetchData('http://localhost:5000/cars');
@@ -22,6 +23,7 @@ const Inventory = () => {
                     }
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

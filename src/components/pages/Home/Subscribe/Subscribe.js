@@ -3,15 +3,15 @@ import './Subscribe.css';
 
 const Subscribe = () => {
     return (
-        <div className='relative top-10 mt-60'>
+        <div className='relative top-10 mt-24 md:mt-36 lg:mt-60 mb-[48rem] md:mb-48 lg:mb-40 xl:mb-14'>
             <div id='subscribe'>
-                <div className='mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm'>
-                    <div className='md:flex justify-between h-full'>
-                        <div className='md:w-1/2 flex flex-col justify-between pr-5'>
-                            <h1 className='md:w-1/2 text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl md:pb-5'>Let's Start Working Together</h1>
+                <div className='px-2 xsm:px-0 mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm'>
+                    <div className='flex flex-col-reverse md:flex-row justify-between h-full'>
+                        <div className='md:w-1/2 flex flex-col justify-between md:pr-5'>
+                            <h1 className='mt-14 md:mt-0 text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl md:pb-5'>Let's Start Working Together</h1>
                             <div className=''>
-                                <h3 className='text-[#88c123] text-sm sm:text-base md:text-lg lg:text-xl'>Subscribe Your Email For Newsletter</h3>
-                                <p className='text-sm md:text-base text-gray-50 my-5'>Don't worry! we are too much conscious about your privacy. So, no junk email send by us.</p>
+                                <h3 className='text-[#88c123] lg:font-semibold text-sm sm:text-base md:text-lg lg:text-xl'>Subscribe Your Email For Newsletter</h3>
+                                <p className='text-sm md:text-base text-gray-700 md:text-gray-50 my-5'>Don't worry! we are too much conscious about your privacy. So, no junk email send by us.</p>
                                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-auto sm:flex sm:space-y-0">
                                     <div class="relative w-full">
                                         <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900">Email address</label>
@@ -26,7 +26,7 @@ const Subscribe = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='md:w-1/2 ps-5'>
+                        <div className='md:w-1/2 md:ps-5'>
                             <div className='bg-[#87c123dc] px-5 py-10 rounded-lg'>
                                 <h3 className='text-white text-3xl'>Get In Touch</h3>
                                 <form className='pt-5'>
