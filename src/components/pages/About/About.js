@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../../shared/Navbar/Navbar';
 import Footer from '../../shared/Footer/Footer';
+import { modalToggleContext } from '../../../App';
+import SingIn from '../SignIn/SignIn';
 
 const About = () => {
+    const { openModal, setOpenModal } = useContext(modalToggleContext);
+
     return (
-        <div className='svg-container'>
+        <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'}>
+            <div className='absolute w-full z-50'>
+                {
+                    openModal
+                    &&
+                    <SingIn setOpenModal={setOpenModal} openModal={openModal}></SingIn>
+                }
+            </div>
             <div><Navbar></Navbar></div>
             <div><Footer></Footer></div>
         </div>

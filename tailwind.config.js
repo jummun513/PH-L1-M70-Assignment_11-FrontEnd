@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      'primary': '#88c123',
+      'secondary': '#7e5bef',
+    },
     screens: {
       xsm: '450px',
       sm: '640px',
@@ -14,5 +18,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }

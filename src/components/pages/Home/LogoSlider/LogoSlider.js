@@ -15,7 +15,7 @@ const LogoSlider = ({ data }) => {
                     <p className='text-xs sm:text-sm md:text-md lg:text-base text-gray-600'>We source our vehicle around the world. We take extra care while buying a vehicle to ensure you get only the best one.</p>
                 </div>
                 <div>
-                    <button type='button' className='btn-style border-2 border-[#88C123] text-white bg-[#88C123] hover:bg-transparent hover:text-[#88C123]'>More Brands</button>
+                    <button type='button' className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>More Brands</button>
                 </div>
             </div>
             <div id='container' className='my-4 md:my-10 py-3 md:py-5'>
