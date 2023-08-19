@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     colors: {
       'primary': '#88c123',
-      'secondary': '#7e5bef',
+      'secondary': '#77a823',
     },
     screens: {
       xsm: '450px',

@@ -15,7 +15,7 @@ const Carousel = ({ data }) => {
 
     return (
         <div id='carousel' className="flex px-2 xsm:px-0 justify-center items-center relative -top-10 xsm:top-0 sm:top-14 md:top-24 xl:top-40 max-w-[380px] xsm:max-w-screen-xsm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl mx-auto">
-            <button type="button" className='px-2 py-1 rounded-sm md:rounded bg-primary hover:bg-[#77a823] ease-linear duration-150' onClick={nextSlide}>
+            <button type="button" className='px-2 py-1 rounded-sm md:rounded bg-primary hover:bg-secondary ease-linear duration-150' onClick={nextSlide}>
                 <LiaLongArrowAltLeftSolid className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white font-semibold" />
             </button>
             <div className='carousel-image'>
@@ -38,7 +38,7 @@ const Carousel = ({ data }) => {
                     );
                 })}
             </div>
-            <button type="button" className='px-2 py-1 rounded-sm md:rounded bg-primary hover:bg-[#77a823] ease-linear duration-150' onClick={nextSlide}>
+            <button type="button" className='px-2 py-1 rounded-sm md:rounded bg-primary hover:bg-secondary ease-linear duration-150' onClick={nextSlide}>
                 <LiaLongArrowAltRightSolid className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white font-semibold" />
             </button>
         </div>

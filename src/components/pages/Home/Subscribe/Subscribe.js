@@ -21,7 +21,7 @@ const Subscribe = () => {
                                         <input className="block border-none p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 ring-2 ring-gray-50 focus:ring-primary focus:outline-none" placeholder="Enter your email" type="email" id="email" required="" />
                                     </div>
                                     <div>
-                                        <button type="submit" className="py-3 px-5 w-full text-sm font-medium text-center text-white bg-primary ring-2 ring-primary hover:bg-[#79ab23]">Subscribe</button>
+                                        <button type="submit" className="py-3 px-5 w-full text-sm font-medium text-center text-white bg-primary ring-2 ring-primary hover:bg-secondary ease-linear duration-150">Subscribe</button>
                                     </div>
                                 </div>
                             </div>

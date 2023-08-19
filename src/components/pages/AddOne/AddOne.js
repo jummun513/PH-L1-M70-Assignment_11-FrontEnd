@@ -4,6 +4,7 @@ import Footer from '../../shared/Footer/Footer';
 
 const AddOne = () => {
     const [checked, setChecked] = useState(false);
+
     return (
         <div className='svg-container'>
             <div className='md:-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-56 md:top-72'>
