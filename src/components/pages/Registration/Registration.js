@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Registration.css';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     const [checked, setChecked] = useState(false);
@@ -33,13 +34,13 @@ const Registration = () => {
                         </div>
                         <div className="flex items-start mb-6">
                             <div className="flex items-center h-5">
-                                <input style={{ color: '#000' }} onClick={() => { setChecked(!checked) }} id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary" required />
+                                <input onClick={() => { setChecked(!checked) }} id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50" required />
                             </div>
                             <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Do you Agree with out terms & condition?</label>
                         </div>
                         <button disabled={!checked} type="submit" className={!checked ? "text-gray-500 bg-gray-200 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 md:px-8 py-2.5 text-center" : "text-black bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-sm w-full sm:w-auto md:px-8 px-5 py-2.5 text-center"}>{checked ? 'Register' : 'Disabled'}</button>
                         <div className="text-sm font-medium text-gray-900 mt-3">
-                            Already have an account? <a href="#" className="text-gray-50 hover:underline ms-2">Login Here.</a>
+                            Already have an account? <Link to='/login' className="text-gray-50 hover:underline ms-2">Login Here.</Link>
                         </div>
                     </form>
                 </div>

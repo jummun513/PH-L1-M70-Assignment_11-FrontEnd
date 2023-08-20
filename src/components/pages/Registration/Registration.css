@@ -3,3 +3,7 @@
     display: grid;
     align-items: center;
 }
+
+#register input[type='checkbox'] {
+    accent-color: #000;
+}

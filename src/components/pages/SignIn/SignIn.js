@@ -1,5 +1,6 @@
 import React from 'react';
 import './SignIn.css';
+import { Link } from 'react-router-dom';
 
 const SingIn = ({ openModal, setOpenModal, hideCross }) => {
 
@@ -18,24 +19,24 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
                             <form className="space-y-6" action="#">
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" placeholder="name@company.com" required />
+                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" placeholder="name@company.com" required />
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" required />
+                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" required />
                                 </div>
                                 <div className="flex justify-between">
                                     <div className="flex items-start">
                                         <div className="flex items-center h-5">
-                                            <input style={{ color: '#88c123' }} id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary" required />
+                                            <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 focus:ring-4 focus:ring-primary" />
                                         </div>
                                         <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Remember me</label>
                                     </div>
-                                    <a href="#" className="text-sm text-secondary hover:underline">Lost Password?</a>
+                                    <a href="/" className="text-sm text-secondary hover:underline">Lost Password?</a>
                                 </div>
                                 <button type="submit" className="w-full text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-primary font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
                                 <div className="text-sm font-medium text-gray-500">
-                                    Not registered? <a href="#" className="text-secondary hover:underline">Create account</a>
+                                    Not registered? <Link to='/register' className="text-secondary hover:underline">Create account</Link>
                                 </div>
                             </form>
                         </div>
