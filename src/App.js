@@ -7,7 +7,6 @@ import Blogs from './components/pages/Blogs/Blogs';
 import About from './components/pages/About/About';
 import NotFound from './components/shared/NotFound/NotFound';
 import AddOne from './components/pages/AddOne/AddOne';
-import Loading from './components/shared/Loading/Loading';
 import SignIn from './components/pages/SignIn/SignIn';
 import Registration from './components/pages/Registration/Registration';
 
@@ -34,7 +33,7 @@ function App() {
       <Route path='/inventory' element={<modalToggleContext.Provider value={{ openModal, setOpenModal, hideCross }}><Inventory></Inventory></modalToggleContext.Provider>}></Route>
       <Route path='/blogs' element={<modalToggleContext.Provider value={{ openModal, setOpenModal, hideCross }}><Blogs></Blogs></modalToggleContext.Provider>}></Route>
       <Route path='/about' element={<modalToggleContext.Provider value={{ openModal, setOpenModal, hideCross }}><About></About></modalToggleContext.Provider>}></Route>
-      <Route path='/add-items' element={<AddOne></AddOne>}></Route>
+      <Route path='/user=items-add' element={<modalToggleContext.Provider value={{ openModal, setOpenModal, hideCross }}><AddOne></AddOne></modalToggleContext.Provider>}></Route>
       <Route path='/register' element={<Registration></Registration>}></Route>
       <Route path='/login' element={<SignIn openModal={true} hideCross={true}></SignIn>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>

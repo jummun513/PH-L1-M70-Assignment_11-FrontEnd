@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './AddOne.css';
 import Footer from '../../shared/Footer/Footer';
+import Navbar from '../../shared/Navbar/Navbar';
+import SingIn from '../SignIn/SignIn';
+import { modalToggleContext } from '../../../App';
 
 const AddOne = () => {
     const [checked, setChecked] = useState(false);
+    const { openModal, setOpenModal } = useContext(modalToggleContext);
 
     return (
-        <div className='svg-container'>
-            <div className='md:-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-56 md:top-72'>
+        <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'}>
+            <div className='absolute w-full z-50'>
+                {
+                    openModal
+                    &&
+                    <SingIn setOpenModal={setOpenModal} openModal={openModal}></SingIn>
+                }
+            </div>
+            <div className='relative'><Navbar></Navbar></div>
+            <div className='z-20 md:-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-56 md:top-72'>
                 <h1 className='text-primary text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>Add One Item In Inventory</h1>
                 <div className='mt-10 md:mt-20'>
                     <form action="#" className='flex flex-col px-5 py-10 bg-[#fafafa] rounded-lg'>

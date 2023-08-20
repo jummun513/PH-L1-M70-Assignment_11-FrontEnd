@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import url from '../../../images/logo.png'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import SingIn from '../../pages/SignIn/SignIn';
 import { modalToggleContext } from '../../../App';
+import src from '../../../images/user.jpg';
 
 const navigation = [
     { name: 'Home', href: '/' },
@@ -14,10 +15,12 @@ const navigation = [
 
 const Navbar = () => {
     const { setOpenModal } = useContext(modalToggleContext);
-    const [navtoggle, setNavToggle] = useState(false);
+    let [navtoggle, setNavToggle] = useState(false);
+    let [userPanel, setUserPanel] = useState(false);
+    const user = true;
 
     return (
-        <div className='absolute z-20 px-2 md:px-0 w-full'>
+        <div id='navbar' className='absolute z-30 px-2 md:px-0 w-full'>
             <div className="relative">
                 <div className="bg-transparent hidden xl:max-w-screen-xl xxl:max-w-screen-xxl mx-auto xl:flex items-center justify-between py-5">
                     <div className='md:flex justify-between md:w-1/3'>
@@ -42,19 +45,21 @@ const Navbar = () => {
                         </a>
                     </div>
                 </div>
-                <nav className="bg-transparent xxl:mt-3 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl pt-4 xl:pt-0 flex flex-wrap items-center justify-between mx-auto">
+                <nav className="relative bg-transparent xxl:mt-3 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl pt-4 xl:pt-0 flex flex-wrap items-center justify-between mx-auto">
                     <a href="/" className="flex items-center">
                         <img className='w-24 md:w-40' src={url} alt="" />
                     </a>
                     <div className="flex items-center md:order-2">
-                        <button onClick={() => { setOpenModal(true) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
-                        <button onClick={() => setNavToggle(!navtoggle)} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-1 xsm:p-2 sm:p-3 w-6 h-6 xsm:w-8 xsm:h-8 sm:w-10 sm:h-10 justify-center text-sm text-white rounded-sm xsm:rounded-md sm:rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+                        {
+                            user ? <button onClick={() => { setUserPanel(!userPanel); (navtoggle = true && setNavToggle(false)) }}><img className='w-7 xsm:w-9 mr-2 md:mr-0 md:w-10 lg:w-12 border-2 p-[1px] rounded-full' src={src} alt="" /></button> : <button onClick={() => { setOpenModal(true); (navtoggle = true && setNavToggle(false)); (userPanel = true) && setUserPanel(false) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
+                        }
+                        <button onClick={() => { setNavToggle(!navtoggle); (userPanel = true) && setUserPanel(false) }} type="button" className="inline-flex items-center p-1 xsm:p-2 sm:p-3 w-6 h-6 xsm:w-8 xsm:h-8 sm:w-10 sm:h-10 justify-center text-sm text-white rounded-sm xsm:rounded-md sm:rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                             <svg className="w-3 h-3 xsm:w-4 xsm:h-4 sm:w-6 sm:h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button>
                     </div>
-                    <div className={`${navtoggle ? "block" : "hidden"} 'items-center justify-between  w-full md:flex md:w-auto z-50 md:order-1`} id="navbar-sticky">
+                    <div className={`items-center justify-between w-full md:flex md:w-auto z-50 md:order-1 ${navtoggle ? "block" : "hidden"}`}>
                         <ul className="flex flex-col md:text-white rounded md:rounded-none mt-3 md:mt-0 text-center md:flex-row md:space-x-6 bg-white md:bg-transparent lg:space-x-12">
                             {navigation.map((item) => (
                                 <li id='sidebar' key={item.name}>
@@ -64,6 +69,13 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                    <div className={`absolute w-full xsm:right-0 top-full mt-3 rounded pb-5 xsm:w-[20rem] text-center bg-primary z-50 ${userPanel ? "block" : "hidden"}`}>
+                        <ul className="text-white my-10">
+                            <li><Link to={`/user=items-add`} className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Add Item</Link></li>
+                            <li><Link to='/add-items' className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Manage Item</Link></li>
+                        </ul>
+                        <button className='text-sm md:text-base border-none font-semibold rounded bg-white hover:bg-slate-50 ease-linear duration-150 py-3 w-[75%]'>Log Out</button>
                     </div>
                 </nav>
             </div>
