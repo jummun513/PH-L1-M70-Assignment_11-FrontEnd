@@ -25,7 +25,7 @@ const Inventory = () => {
                 }
             </div>
             <div className='relative'><Navbar></Navbar></div>
-            <div className='xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-40 md:top-72'>
+            <div className='-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative z-20 top-40 md:top-72'>
                 <h1 className='text-primary text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>All Listing Cars</h1>
                 <div id='cart-container' className='gap-7 mt-10 md:mt-20'>
                     {

@@ -1,5 +1,13 @@
-#subscribe {
+#subscribe-us #subscribe {
     position: absolute;
     z-index: 10;
     width: 100%;
+}
+
+#subscribe-us #subscribe-left {
+    background-image: url('../../../../images/subscribe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
 }

@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Subscribe.css';
+import { Link } from 'react-router-dom';
 
 const Subscribe = () => {
+    const [checked, setChecked] = useState(false);
+
     return (
-        <div className='relative z-30 top-10 mt-24 md:mt-36 lg:mt-60 mb-[48rem] md:mb-48 lg:mb-40 xl:mb-14'>
+        <div id='subscribe-us' className='relative z-30 top-10 mt-24 md:mt-36 lg:mt-60 mb-[48rem] md:mb-54 lg:mb-60 xl:mb-96'>
             <div id='subscribe'>
                 <div className='px-2 xsm:px-0 mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm'>
                     <div className='flex flex-col-reverse md:flex-row justify-between h-full'>
-                        <div className='md:w-1/2 flex flex-col justify-between md:pr-5'>
-                            <h1 className='mt-14 md:mt-0 text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl md:pb-5'>Let's Start Working Together</h1>
-                            <div className=''>
+                        <div id='subscribe-left' className='md:w-1/2 mt-5 md:mt-0 flex md:shadow-2xl flex-col justify-between p-5 md:pr-5'>
+                            <h1 className='text-white text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl md:pb-5'>Let's Start Working Together</h1>
+                            <div className='pt-5 md:p-5'>
                                 <h3 className='text-primary lg:font-semibold text-sm sm:text-base md:text-lg lg:text-xl'>Subscribe Your Email htmlFor Newsletter</h3>
-                                <p className='text-sm md:text-base text-gray-700 md:text-gray-50 my-5'>Don't worry! we are too much conscious about your privacy. So, no junk email send by us.</p>
+                                <p className='text-sm md:text-base text-gray-50 my-5'>Don't worry! we are too much conscious about your privacy. So, no junk email send by us.</p>
                                 <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-auto sm:flex sm:space-y-0">
                                     <div className="relative w-full">
                                         <label htmlFor="email" className="hidden mb-2 text-sm font-medium text-gray-900">Email address</label>
@@ -26,7 +29,7 @@ const Subscribe = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='md:w-1/2 md:ps-5'>
+                        <div className='md:w-1/2 md:shadow-2xl md:ps-5'>
                             <div className='bg-[#87c123dc] px-5 py-10 rounded-lg'>
                                 <h3 className='text-white text-3xl'>Get In Touch</h3>
                                 <form className='pt-5'>
@@ -52,8 +55,16 @@ const Subscribe = () => {
                                             <label htmlFor="floating_last_name" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
                                         </div>
                                     </div>
-                                    <button type="submit" className="text-[#000] bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
-                                </form>
+                                    <div className="flex items-start mb-6">
+                                        <div className="flex items-center h-5">
+                                            <input onClick={() => { setChecked(!checked) }} id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50" required />
+                                        </div>
+                                        <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Do you Agree with our terms & condition?</label>
+                                    </div>
+                                    <button disabled={!checked} type="submit" className={!checked ? "text-gray-500 bg-gray-200 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 md:px-8 py-2.5 text-center" : "text-black bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-sm w-full sm:w-auto md:px-8 px-5 py-2.5 text-center"}>{checked ? 'Register' : 'Disabled'}</button>
+                                    <div className="text-sm font-medium text-gray-900 mt-3">
+                                        Already have an account? <Link to='/login' className="text-gray-50 hover:underline ms-2">Login Here.</Link>
+                                    </div></form>
                             </div>
                         </div>
                     </div>

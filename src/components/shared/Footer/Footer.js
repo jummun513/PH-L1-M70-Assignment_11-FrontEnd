@@ -7,7 +7,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div id='footer' className='relative z-10'>
+        <div id='footer' className='relative z-10 portrait:top-36 sm:portrait:top-36 md:portrait:top-0 lg:landscape:top-0'>
             <div className='footer-container'>
                 <footer className="px-2 xsm:px-0 mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm">
                     <div className="md:flex justify-between">

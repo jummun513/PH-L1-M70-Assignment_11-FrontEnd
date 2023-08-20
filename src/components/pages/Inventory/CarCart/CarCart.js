@@ -7,7 +7,7 @@ const CarCart = ({ data, liked, wished, user }) => {
     return (
         <div id='cart' className='p-3 pb-5 mx-3 xsm:mx-0'>
             <div className="cart-img-container max-w-80">
-                <img className='cart-img max-w-80' src={data.img} alt={data.car + 'car picture'} />
+                <img loading='lazy' className='cart-img max-w-80' src={data.img} alt={data.car + 'car picture'} />
             </div>
             <div className="flex flex-col justify-between">
                 <div className="cart-text pt-5 px-3">

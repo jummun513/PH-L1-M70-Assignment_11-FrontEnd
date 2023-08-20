@@ -5,6 +5,7 @@ import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 
 const Registration = () => {
     const [checked, setChecked] = useState(false);
+
     return (
         <div id='register' className='xl:max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm xsm:max-w-screen-sm px-2 md:px-0 mx-auto'>
             <div className='bg-[#87c123dc] px-5 py-10 rounded-lg shadow-2xl'>

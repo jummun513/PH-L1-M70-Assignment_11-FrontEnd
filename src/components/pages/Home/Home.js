@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Banner from './Banner/Banner';
 import LogoSlider from './LogoSlider/LogoSlider';
 import url from '../../../data/logoData.json';
 import Listing from './Listing/Listing';
-import Loading from '../../shared/Loading/Loading';
 import Footer from '../../shared/Footer/Footer';
 import Subscribe from './Subscribe/Subscribe';
 import SingIn from '../SignIn/SignIn';
-import height from './Home.css';
 import { modalToggleContext } from '../../../App';
 
 

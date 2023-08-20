@@ -19,7 +19,7 @@ const AddOne = () => {
                 }
             </div>
             <div className='relative'><Navbar></Navbar></div>
-            <div className='z-20 md:-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-56 md:top-72'>
+            <div className='z-20 md:-mb-20 xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm mx-auto relative top-36 -mb-20 md:top-72'>
                 <h1 className='text-primary text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>Add One Item In Inventory</h1>
                 <div className='mt-10 md:mt-20'>
                     <form action="#" className='flex flex-col px-5 py-10 bg-[#fafafa] rounded-lg'>

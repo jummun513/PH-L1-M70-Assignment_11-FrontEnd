@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import url from '../../../images/logo.png'
 import { Link, NavLink } from 'react-router-dom';
-import SingIn from '../../pages/SignIn/SignIn';
 import { modalToggleContext } from '../../../App';
 import src from '../../../images/user.jpg';
 
@@ -47,7 +46,7 @@ const Navbar = () => {
                 </div>
                 <nav className="relative bg-transparent xxl:mt-3 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-screen-xxl pt-4 xl:pt-0 flex flex-wrap items-center justify-between mx-auto">
                     <a href="/" className="flex items-center">
-                        <img className='w-24 md:w-40' src={url} alt="" />
+                        <img loading='lazy' className='w-24 md:w-40' src={url} alt="" />
                     </a>
                     <div className="flex items-center md:order-2">
                         {
@@ -73,7 +72,7 @@ const Navbar = () => {
                     <div className={`absolute w-full xsm:right-0 top-full mt-3 rounded pb-5 xsm:w-[20rem] text-center bg-primary z-50 ${userPanel ? "block" : "hidden"}`}>
                         <ul className="text-white my-10">
                             <li><Link to={`/user=items-add`} className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Add Item</Link></li>
-                            <li><Link to='/add-items' className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Manage Item</Link></li>
+                            <li><Link to='/user=manage-all-items' className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Manage Item</Link></li>
                         </ul>
                         <button className='text-sm md:text-base border-none font-semibold rounded bg-white hover:bg-slate-50 ease-linear duration-150 py-3 w-[75%]'>Log Out</button>
                     </div>

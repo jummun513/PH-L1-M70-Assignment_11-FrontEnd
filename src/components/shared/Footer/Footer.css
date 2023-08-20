@@ -14,20 +14,39 @@
     width: 100%;
 }
 
+@media screen and (max-height: 900px) {
+    #footer {
+        height: 110vh;
+    }
+}
+
 @media screen and (max-height: 850px) {
     #footer {
-        height: 120vh;
+        height: 130vh;
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 750px) {
     #footer {
-        height: 140vh;
+        height: 150vh;
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (min-height: 901px) {
     #footer {
-        height: 160vh;
+        height: 80vh;
+    }
+}
+
+@media screen and (min-height: 1100px) {
+    #footer {
+        height: 60vh;
+    }
+}
+
+
+@media screen and (min-height: 1200px) {
+    #footer {
+        height: 50vh;
     }
 }
