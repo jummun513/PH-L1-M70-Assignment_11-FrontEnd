@@ -7,7 +7,13 @@
 ## The things uses on this project
 
 - I use here `React` `Node.js` `Express.js` `MongoDB`
-- I also use some node package manager in client side. Like as `react-router` for setup routing on different page, `tailwindCSS` for design UI, `react-icons` for some icons, `axios` for maintain http promised request properly arranged.
+- I also use some node package manager in client side. Like as -
+    -`react-router` for setup routing on different page
+    -`tailwindCSS` for design UI and customize theme as my own
+    -`react-icons` for some icons
+    -`axios` for maintain http promised request properly arranged
+    -`react firebase hooks` for implement easy firebase authentication
+    -`custom hooks` for fetch data from the server
 
 
 ### Some Features of the project
