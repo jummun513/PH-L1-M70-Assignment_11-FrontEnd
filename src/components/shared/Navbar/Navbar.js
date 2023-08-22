@@ -3,7 +3,11 @@ import './Navbar.css';
 import url from '../../../images/logo.png'
 import { Link, NavLink } from 'react-router-dom';
 import { MyContext } from '../../../App';
-import src from '../../../images/user.jpg';
+import src from '../../../images/user.png';
+import { useSignOut } from 'react-firebase-hooks/auth';
+import { getAuth } from 'firebase/auth';
+import { app } from '../../../firebase.init';
+import Processing from '../Processing/Processing';
 
 const navigation = [
     { name: 'Home', href: '/home' },
@@ -12,10 +16,22 @@ const navigation = [
     { name: 'About', href: '/about' },
 ]
 
+const auth = getAuth(app);
+
 const Navbar = () => {
-    const { displayUser, setOpenModal } = useContext(MyContext);
+    const { displayUser, setOpenModal, setDisplayUser } = useContext(MyContext);
     let [navtoggle, setNavToggle] = useState(false);
     let [userPanel, setUserPanel] = useState(false);
+    const [signOut, loading, error] = useSignOut(auth);
+
+    const handleLogOut = async () => {
+        const success = await signOut();
+        if (success) {
+            setDisplayUser(null);
+        }
+        if (error) {
+        }
+    }
 
     return (
         <div id='navbar' className='absolute z-30 px-2 md:px-0 w-full'>
@@ -49,7 +65,7 @@ const Navbar = () => {
                     </a>
                     <div className="flex items-center md:order-2">
                         {
-                            (displayUser !== null) ? <button onClick={() => { setUserPanel(!userPanel); (navtoggle = true && setNavToggle(false)) }}><img className='w-7 xsm:w-9 mr-2 md:mr-0 md:w-10 lg:w-12 border-2 p-[1px] rounded-full' src={src} alt="" /></button> : <button onClick={() => { setOpenModal(true); (navtoggle = true && setNavToggle(false)); (userPanel = true) && setUserPanel(false) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
+                            (displayUser !== null) ? <button onClick={() => { setUserPanel(!userPanel); (navtoggle = true && setNavToggle(false)) }}><img className='w-7 xsm:w-9 mr-2 md:mr-0 md:w-10 lg:w-12 border-2 p-[1px] rounded-full' src={displayUser.user?.photoURL || src} alt="" /></button> : <button onClick={() => { setOpenModal(true); (navtoggle = true && setNavToggle(false)); (userPanel = true) && setUserPanel(false) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
                         }
                         <button onClick={() => { setNavToggle(!navtoggle); (userPanel = true) && setUserPanel(false) }} type="button" className="inline-flex items-center p-1 xsm:p-2 sm:p-3 w-6 h-6 xsm:w-8 xsm:h-8 sm:w-10 sm:h-10 justify-center text-sm text-white rounded-sm xsm:rounded-md sm:rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                             <svg className="w-3 h-3 xsm:w-4 xsm:h-4 sm:w-6 sm:h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -68,13 +84,18 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className={`absolute w-full xsm:right-0 top-full mt-3 rounded pb-5 xsm:w-[20rem] text-center bg-primary z-50 ${userPanel ? "block" : "hidden"}`}>
-                        <ul className="text-white my-10">
-                            <li><Link to={`/user=items-add`} className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Add Item</Link></li>
-                            <li><Link to='/user=manage-all-items' className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Manage Item</Link></li>
-                        </ul>
-                        <button className='text-sm md:text-base border-none font-semibold rounded bg-white hover:bg-slate-50 ease-linear duration-150 py-3 w-[75%]'>Log Out</button>
-                    </div>
+                    {
+                        (displayUser !== null) &&
+                        <div className={`absolute w-full xsm:right-0 top-full mt-3 rounded pb-5 xsm:w-[20rem] text-center bg-primary z-50 ${userPanel ? "block" : "hidden"}`}>
+                            <ul className="text-white my-10">
+                                <li><Link to={`/user=items-add`} className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Add Item</Link></li>
+                                <li><Link to='/user=manage-all-items' className='text-sm lg:text-base font-semibold rounded flex ms-10 justify-start my-5 hover:text-black ease-linear duration-150'>Manage Item</Link></li>
+                            </ul>
+                            {
+                                loading ? <div className='relative w-[75%]'><Processing></Processing></div> : <button onClick={handleLogOut} className='text-sm md:text-base border-none font-semibold rounded bg-white hover:bg-slate-50 ease-linear duration-150 py-3 w-[75%]'>Log Out</button>
+                            }
+                        </div>
+                    }
                 </nav>
             </div>
         </div>

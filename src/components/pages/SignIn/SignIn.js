@@ -20,9 +20,6 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
 
-
-    useEffect(() => { }, [displayError]);
-
     const handleEmailField = e => {
         setEmail(e.target.value);
     }
@@ -33,16 +30,23 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
 
     const handleSignInForm = event => {
         signInWithEmailAndPassword(email, password);
+        event.preventDefault();
+    }
+
+    useEffect(() => {
         if (error) {
             setDisplayError(error.message);
         }
+    }, [error]);
+
+    useEffect(() => {
         if (user) {
-            setDisplayUser(user);
             setDisplayError('');
+            setDisplayUser(user);
+            !hideCross && setOpenModal(false);
             navigate('/home');
         }
-        event.preventDefault();
-    }
+    }, [user]);
 
     return (
         <div id='login-modal' className={openModal ? 'active' : 'hidden'}>

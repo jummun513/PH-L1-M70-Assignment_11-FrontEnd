@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -11,19 +11,26 @@ import { useNavigate } from 'react-router-dom';
 const auth = getAuth(app);
 
 const SocialLogin = () => {
-    const { displayUser, setDisplayUser } = useContext(MyContext);
-    let errorElement = '';
+    const { setDisplayUser, setOpenModal } = useContext(MyContext);
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const [errorElement, setErrorElement] = useState('');
 
-    if (error) {
-        errorElement = error.message;
-    }
-    if (user) {
-        setDisplayUser(user);
-        errorElement = '';
-        navigate('/home')
-    }
+    useEffect(() => {
+        if (error) {
+            setErrorElement(error.message);
+        }
+    }, [error]);
+
+    // The React.js warning "Cannot update a component while rendering a different component"
+    useEffect(() => {
+        if (user) {
+            setDisplayUser(user);
+            setErrorElement('');
+            navigate('/home');
+            setOpenModal(false);
+        }
+    }, [user]);
 
     return (
         <>
@@ -37,7 +44,7 @@ const SocialLogin = () => {
                 </button>
                 {
                     loading ? <div className='me-2 pb-2'><Processing></Processing></div> :
-                        <button onClick={() => signInWithGoogle()} type="button" className="text-black bg-[#fff] hover:bg-gray-200 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
+                        <button onClick={() => { signInWithGoogle(); setErrorElement('') }} type="button" className="text-black bg-[#fff] hover:bg-gray-200 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center justify-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
                             <FcGoogle className='h-5 w-5 mr-2'></FcGoogle>
                             Sign in with Google
                         </button>

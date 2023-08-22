@@ -7,6 +7,7 @@ import Footer from '../../shared/Footer/Footer';
 import Subscribe from './Subscribe/Subscribe';
 import SingIn from '../SignIn/SignIn';
 import { MyContext } from '../../../App';
+import './Home.css';
 
 
 const Home = () => {
