@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Registration.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 import { app } from '../../../firebase.init';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -23,6 +23,7 @@ const Registration = () => {
     const [lastName, setLastName] = useState('');
     const [error, setError] = useState('');
     const [process, setProcess] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleEmailField = event => {
@@ -80,6 +81,7 @@ const Registration = () => {
                 setDisplayUser(user);
                 setError('');
                 setProcess(false);
+                navigate('/home');
             })
             .catch((error) => {
                 setError(error.message);

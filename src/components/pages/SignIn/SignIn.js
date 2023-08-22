@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './SignIn.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { getAuth } from 'firebase/auth';
@@ -13,11 +13,12 @@ const auth = getAuth(app);
 
 const SingIn = ({ openModal, setOpenModal, hideCross }) => {
     const { displayUser, setDisplayUser } = useContext(MyContext);
+    const [displayError, setDisplayError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [displayError, setDisplayError] = useState('');
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate();
 
 
     useEffect(() => { }, [displayError]);
@@ -38,6 +39,7 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
         if (user) {
             setDisplayUser(user);
             setDisplayError('');
+            navigate('/home');
         }
         event.preventDefault();
     }
@@ -75,9 +77,9 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
                                 <a href="/" className="text-sm text-secondary hover:underline">Forgot Password?</a>
                             </div>
                             {
-                                (displayError.includes('wrong-password') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>Your password is wrong!</p>) ||
-                                (displayError.includes('too-many-requests') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>Too many requests! Try later.</p>) ||
-                                (displayError.includes('user-not-found') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>This email is not registered!</p>)
+                                (displayError.includes('wrong-password') && <p className='md:text-sm text-[12px] font-semibold md:my-2 my-1 text-red-500'>Your password is wrong!</p>) ||
+                                (displayError.includes('too-many-requests') && <p className='md:text-sm text-[12px] font-semibold md:my-2 my-1 text-red-500'>Too many requests! Try later.</p>) ||
+                                (displayError.includes('user-not-found') && <p className='md:text-sm text-[12px] font-semibold md:my-2 my-1 text-red-500'>This email is not registered!</p>)
                             }
                             {
                                 loading ? <Processing></Processing> :
