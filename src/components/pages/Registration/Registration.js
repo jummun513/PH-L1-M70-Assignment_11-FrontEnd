@@ -6,21 +6,23 @@ import { app } from '../../../firebase.init';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { BiShow, BiHide } from 'react-icons/bi'
 import { MyContext } from '../../../App';
+import Processing from '../../shared/Processing/Processing';
 
 const auth = getAuth(app);
 
 const Registration = () => {
     const [checked, setChecked] = useState(false);
-    const { user, setUser } = useContext(MyContext);
+    const { displayUser, setDisplayUser } = useContext(MyContext);
     const [showPassword, setShowPassword] = useState(false);
-    const [testValidity, setTestValidity] = useState('');
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [testValidity, setTestValidity] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [lastName, setLastName] = useState('');
     const [error, setError] = useState('');
+    const [process, setProcess] = useState(false);
 
 
     const handleEmailField = event => {
@@ -71,21 +73,17 @@ const Registration = () => {
     }
 
     const formSubmit = (event) => {
-        if (confirmPassword !== password) {
-
-            return;
-        }
-        else {
-            setError('');
-        }
+        setProcess(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 const user = result.user;
-                setUser(user);
+                setDisplayUser(user);
                 setError('');
+                setProcess(false);
             })
             .catch((error) => {
                 setError(error.message);
+                setProcess(false);
             });
 
         event.preventDefault();
@@ -154,7 +152,10 @@ const Registration = () => {
                         </div>
                         <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Do you Agree with our terms & condition?</label>
                     </div>
-                    <button disabled={(!checked || (error !== ''))} type="submit" className={(!checked || (error !== '')) ? "text-gray-500 bg-gray-200 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 md:px-8 py-2.5 text-center" : "text-black bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-sm w-full sm:w-auto md:px-8 px-5 py-2.5 text-center"}>{(checked && (error === '')) ? 'Register' : 'Disabled'}</button>
+                    {
+                        process ? <Processing></Processing> :
+                            <button disabled={(!checked || (error !== ''))} type="submit" className={(!checked || (error !== '')) ? "text-gray-500 bg-gray-200 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 md:px-8 py-2.5 text-center" : "text-black bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-sm w-full sm:w-auto md:px-8 px-5 py-2.5 text-center"}>{(checked && (error === '')) ? 'Register' : 'Disabled'}</button>
+                    }
                     <div className="text-sm font-medium text-gray-900 mt-3">
                         Already have an account? <Link to='/login' className="text-gray-50 hover:underline ms-2">Login Here.</Link>
                     </div>

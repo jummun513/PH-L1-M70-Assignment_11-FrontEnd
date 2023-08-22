@@ -19,7 +19,7 @@
     - `context api` for props drilling.
 
 
-### Some Features of the project
+## Some Features of the project
 
 - Component and Pages
     1. The project have beautiful responsive header with `Navbar` and `Banner`

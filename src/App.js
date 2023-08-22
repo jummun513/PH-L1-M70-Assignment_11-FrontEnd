@@ -10,13 +10,14 @@ import AddOne from './components/pages/AddOne/AddOne';
 import SignIn from './components/pages/SignIn/SignIn';
 import Registration from './components/pages/Registration/Registration';
 import ManageItem from './components/pages/ManageItem/ManageItem';
+import Processing from './components/shared/Processing/Processing';
 
 export const MyContext = createContext();
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const [preLoading, setPreLoading] = useState(true);
-  const [user, setUser] = useState(null);
+  const [displayUser, setDisplayUser] = useState(null);
 
   const spinner = document.getElementById('spinner');
   if (spinner) {
@@ -32,7 +33,7 @@ function App() {
   return (
     !preLoading &&
 
-    <MyContext.Provider value={{ openModal, setOpenModal, hideCross, user, setUser }}>
+    <MyContext.Provider value={{ openModal, setOpenModal, hideCross, displayUser, setDisplayUser }}>
       <Routes>
         {["/home", "/"].map((path, index) =>
           <Route path={path} element={<Home></Home>} key={index} />
@@ -44,6 +45,7 @@ function App() {
         <Route path='/user=manage-all-items' element={<ManageItem></ManageItem>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/login' element={<SignIn openModal={true} hideCross={true}></SignIn>}></Route>
+        <Route path='/process' element={<Processing></Processing>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </MyContext.Provider>

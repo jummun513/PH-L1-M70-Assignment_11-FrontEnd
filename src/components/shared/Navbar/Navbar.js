@@ -13,7 +13,7 @@ const navigation = [
 ]
 
 const Navbar = () => {
-    const { user, setOpenModal } = useContext(MyContext);
+    const { displayUser, setOpenModal } = useContext(MyContext);
     let [navtoggle, setNavToggle] = useState(false);
     let [userPanel, setUserPanel] = useState(false);
 
@@ -49,7 +49,7 @@ const Navbar = () => {
                     </a>
                     <div className="flex items-center md:order-2">
                         {
-                            (user !== null) ? <button onClick={() => { setUserPanel(!userPanel); (navtoggle = true && setNavToggle(false)) }}><img className='w-7 xsm:w-9 mr-2 md:mr-0 md:w-10 lg:w-12 border-2 p-[1px] rounded-full' src={src} alt="" /></button> : <button onClick={() => { setOpenModal(true); (navtoggle = true && setNavToggle(false)); (userPanel = true) && setUserPanel(false) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
+                            (displayUser !== null) ? <button onClick={() => { setUserPanel(!userPanel); (navtoggle = true && setNavToggle(false)) }}><img className='w-7 xsm:w-9 mr-2 md:mr-0 md:w-10 lg:w-12 border-2 p-[1px] rounded-full' src={src} alt="" /></button> : <button onClick={() => { setOpenModal(true); (navtoggle = true && setNavToggle(false)); (userPanel = true) && setUserPanel(false) }} type="button" className="btn-style mr-2 sm:mr-3 md:mr-0 border-2 border-primary bg-primary text-white hover:bg-transparent">Sign In</button>
                         }
                         <button onClick={() => { setNavToggle(!navtoggle); (userPanel = true) && setUserPanel(false) }} type="button" className="inline-flex items-center p-1 xsm:p-2 sm:p-3 w-6 h-6 xsm:w-8 xsm:h-8 sm:w-10 sm:h-10 justify-center text-sm text-white rounded-sm xsm:rounded-md sm:rounded-lg md:hidden border-2 border-white hover:bg-black-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                             <svg className="w-3 h-3 xsm:w-4 xsm:h-4 sm:w-6 sm:h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

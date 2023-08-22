@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './SignIn.css';
 import { Link } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { getAuth } from 'firebase/auth';
+import { app } from '../../../firebase.init';
+import { MyContext } from '../../../App';
+import { BiHide, BiShow } from 'react-icons/bi';
+import Processing from '../../shared/Processing/Processing';
+
+const auth = getAuth(app);
 
 const SingIn = ({ openModal, setOpenModal, hideCross }) => {
+    const { displayUser, setDisplayUser } = useContext(MyContext);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [displayError, setDisplayError] = useState('');
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+
+
+    useEffect(() => { }, [displayError]);
+
+    const handleEmailField = e => {
+        setEmail(e.target.value);
+    }
+
+    const handlePasswordField = event => {
+        setPassword(event.target.value);
+    }
+
+    const handleSignInForm = event => {
+        signInWithEmailAndPassword(email, password);
+        if (error) {
+            setDisplayError(error.message);
+        }
+        if (user) {
+            setDisplayUser(user);
+            setDisplayError('');
+        }
+        event.preventDefault();
+    }
 
     return (
         <div id='login-modal' className={openModal ? 'active' : 'hidden'}>
@@ -16,14 +53,17 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
                     </button>
                     <div className="px-6 py-6 lg:px-8">
                         <h3 className="mb-4 text-xl font-medium text-gray-900">Sign in to our platform</h3>
-                        <form className="space-y-6" action="#">
+                        <form className="space-y-6" onSubmit={handleSignInForm}>
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
-                                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" placeholder="name@company.com" required />
+                                <input onBlur={handleEmailField} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" placeholder="name@company.com" required />
                             </div>
-                            <div>
+                            <div className='relative'>
+                                {
+                                    (password !== '') && (showPassword ? <BiShow onClick={() => { setShowPassword(!showPassword) }} className='cursor-pointer absolute top-[50%] right-[2%] text-primary h-6 w-6'></BiShow> : <BiHide onClick={() => { setShowPassword(!showPassword) }} className='cursor-pointer absolute top-[50%] right-[2%] text-primary h-6 w-6'></BiHide>)
+                                }
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your password</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" required />
+                                <input type={showPassword ? 'text' : 'password'} onKeyUp={handlePasswordField} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg outline-none focus:ring-2 focus:ring-primary block w-full p-2.5" required />
                             </div>
                             <div className="flex justify-between">
                                 <div className="flex items-start">
@@ -32,9 +72,17 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
                                     </div>
                                     <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Remember me</label>
                                 </div>
-                                <a href="/" className="text-sm text-secondary hover:underline">Lost Password?</a>
+                                <a href="/" className="text-sm text-secondary hover:underline">Forgot Password?</a>
                             </div>
-                            <button type="submit" className="w-full text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-primary font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+                            {
+                                (displayError.includes('wrong-password') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>Your password is wrong!</p>) ||
+                                (displayError.includes('too-many-requests') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>Too many requests! Try later.</p>) ||
+                                (displayError.includes('user-not-found') && <p className='md:text-sm text-[12px] font-semibold my-2 text-red-500'>This email is not registered!</p>)
+                            }
+                            {
+                                loading ? <Processing></Processing> :
+                                    <button type="submit" className="w-full text-white bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-primary font-semibold rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+                            }
                             <div className="text-sm font-medium text-gray-500">
                                 Not registered? <Link to='/register' className="text-secondary hover:underline">Create account</Link>
                             </div>
