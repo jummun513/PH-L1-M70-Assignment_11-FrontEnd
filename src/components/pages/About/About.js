@@ -5,15 +5,15 @@ import { MyContext } from '../../../App';
 import SingIn from '../SignIn/SignIn';
 
 const About = () => {
-    const { openModal, setOpenModal } = useContext(MyContext);
+    const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
 
     return (
-        <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'}>
+        <div className={openSignInModal ? 'modal-parent-height svg-container' : 'svg-container'}>
             <div className='absolute w-full z-50'>
                 {
-                    openModal
+                    openSignInModal
                     &&
-                    <SingIn setOpenModal={setOpenModal} openModal={openModal}></SingIn>
+                    <SingIn setOpenSignInModal={setOpenSignInModal} openSignInModal={openSignInModal}></SingIn>
                 }
             </div>
             <div><Navbar></Navbar></div>

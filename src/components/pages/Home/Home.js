@@ -11,15 +11,15 @@ import './Home.css';
 
 
 const Home = () => {
-    const { openModal, setOpenModal } = useContext(MyContext);
+    const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
 
     return (
-        <div className={openModal ? 'modal-parent-height' : ''}>
+        <div className={openSignInModal ? 'modal-parent-height' : ''}>
             <div className='absolute w-full z-50'>
                 {
-                    openModal
+                    openSignInModal
                     &&
-                    <SingIn setOpenModal={setOpenModal} openModal={openModal}></SingIn>
+                    <SingIn setOpenSignInModal={setOpenSignInModal} openSignInModal={openSignInModal}></SingIn>
                 }
             </div>
             <div>

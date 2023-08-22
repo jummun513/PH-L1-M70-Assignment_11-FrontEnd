@@ -11,7 +11,7 @@ import Processing from '../../shared/Processing/Processing';
 
 const auth = getAuth(app);
 
-const SingIn = ({ openModal, setOpenModal, hideCross }) => {
+const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
     const { displayUser, setDisplayUser } = useContext(MyContext);
     const [displayError, setDisplayError] = useState('');
     const [email, setEmail] = useState('');
@@ -43,16 +43,16 @@ const SingIn = ({ openModal, setOpenModal, hideCross }) => {
         if (user) {
             setDisplayError('');
             setDisplayUser(user);
-            !hideCross && setOpenModal(false);
+            !hideCross && setOpenSignInModal(false);
             navigate('/home');
         }
     }, [user]);
 
     return (
-        <div id='login-modal' className={openModal ? 'active' : 'hidden'}>
+        <div id='login-modal' className={openSignInModal ? 'active' : 'hidden'}>
             <div className='modal-container w-auto xsm:w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[50rem]'>
                 <div className="relative bg-white rounded-lg shadow-2xl">
-                    <button type="button" onClick={() => { setOpenModal(false) }} className={hideCross ? 'hidden' : "absolute top-3 right-2.5 text-secondary bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"}>
+                    <button type="button" onClick={() => { setOpenSignInModal(false) }} className={hideCross ? 'hidden' : "absolute top-3 right-2.5 text-secondary bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"}>
                         <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                         </svg>

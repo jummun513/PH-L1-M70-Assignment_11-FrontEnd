@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const auth = getAuth(app);
 
 const SocialLogin = () => {
-    const { setDisplayUser, setOpenModal } = useContext(MyContext);
+    const { setDisplayUser, setOpenSignInModal } = useContext(MyContext);
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const [errorElement, setErrorElement] = useState('');
@@ -28,7 +28,7 @@ const SocialLogin = () => {
             setDisplayUser(user);
             setErrorElement('');
             navigate('/home');
-            setOpenModal(false);
+            setOpenSignInModal(false);
         }
     }, [user]);
 

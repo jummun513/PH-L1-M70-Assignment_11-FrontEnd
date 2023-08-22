@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import './App.css';
 import Home from './components/pages/Home/Home';
 import Inventory from './components/pages/Inventory/Inventory';
@@ -10,12 +10,12 @@ import AddOne from './components/pages/AddOne/AddOne';
 import SignIn from './components/pages/SignIn/SignIn';
 import Registration from './components/pages/Registration/Registration';
 import ManageItem from './components/pages/ManageItem/ManageItem';
-import Processing from './components/shared/Processing/Processing';
+import ConfirmModal from './components/shared/ConfirmModal/ConfirmModal';
 
 export const MyContext = createContext();
 
 function App() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openSignInModal, setOpenSignInModal] = useState(false);
   const [preLoading, setPreLoading] = useState(true);
   const [displayUser, setDisplayUser] = useState(null);
 
@@ -33,7 +33,7 @@ function App() {
   return (
     !preLoading &&
 
-    <MyContext.Provider value={{ openModal, setOpenModal, hideCross, displayUser, setDisplayUser }}>
+    <MyContext.Provider value={{ openSignInModal, setOpenSignInModal, hideCross, displayUser, setDisplayUser }}>
       <Routes>
         {["/home", "/"].map((path, index) =>
           <Route path={path} element={<Home></Home>} key={index} />
@@ -44,8 +44,8 @@ function App() {
         <Route path='/user=items-add' element={<AddOne></AddOne>}></Route>
         <Route path='/user=manage-all-items' element={<ManageItem></ManageItem>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
-        <Route path='/login' element={<SignIn openModal={true} hideCross={true}></SignIn>}></Route>
-        <Route path='/process' element={<Processing></Processing>}></Route>
+        <Route path='/login' element={<SignIn openSignInModal={true} hideCross={true}></SignIn>}></Route>
+        <Route path='/modal' element={<ConfirmModal></ConfirmModal>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </MyContext.Provider>
