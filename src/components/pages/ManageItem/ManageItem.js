@@ -3,11 +3,11 @@ import './ManageItem.css';
 import Footer from '../../shared/Footer/Footer';
 import Navbar from '../../shared/Navbar/Navbar';
 import SingIn from '../SignIn/SignIn';
-import { modalToggleContext } from '../../../App';
+import { MyContext } from '../../../App';
 
 const ManageItem = () => {
     const [checked, setChecked] = useState(false);
-    const { openModal, setOpenModal } = useContext(modalToggleContext);
+    const { openModal, setOpenModal } = useContext(MyContext);
 
     return (
         <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'}>

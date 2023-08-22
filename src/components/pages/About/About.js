@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Navbar from '../../shared/Navbar/Navbar';
 import Footer from '../../shared/Footer/Footer';
-import { modalToggleContext } from '../../../App';
+import { MyContext } from '../../../App';
 import SingIn from '../SignIn/SignIn';
 
 const About = () => {
-    const { openModal, setOpenModal } = useContext(modalToggleContext);
+    const { openModal, setOpenModal } = useContext(MyContext);
 
     return (
         <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'}>

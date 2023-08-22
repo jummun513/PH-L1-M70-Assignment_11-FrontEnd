@@ -5,7 +5,7 @@ import CarCart from './CarCart/CarCart';
 import './Inventory.css';
 import { useContext, useState } from 'react';
 import Footer from '../../shared/Footer/Footer';
-import { modalToggleContext } from '../../../App';
+import { MyContext } from '../../../App';
 import SingIn from '../SignIn/SignIn';
 
 const Inventory = () => {
@@ -13,7 +13,7 @@ const Inventory = () => {
     const [isLiked, setLiked] = useState(false);
     const [isWished, setWished] = useState(false);
     const user = false;
-    const { openModal, setOpenModal } = useContext(modalToggleContext);
+    const { openModal, setOpenModal } = useContext(MyContext);
 
     return (
         <div className={openModal ? 'modal-parent-height svg-container' : 'svg-container'} >

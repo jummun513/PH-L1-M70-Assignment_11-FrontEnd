@@ -6,11 +6,11 @@ import Listing from './Listing/Listing';
 import Footer from '../../shared/Footer/Footer';
 import Subscribe from './Subscribe/Subscribe';
 import SingIn from '../SignIn/SignIn';
-import { modalToggleContext } from '../../../App';
+import { MyContext } from '../../../App';
 
 
 const Home = () => {
-    const { openModal, setOpenModal } = useContext(modalToggleContext);
+    const { openModal, setOpenModal } = useContext(MyContext);
 
     return (
         <div className={openModal ? 'modal-parent-height' : ''}>
