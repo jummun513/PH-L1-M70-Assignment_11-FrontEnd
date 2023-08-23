@@ -6,7 +6,7 @@ const Subscribe = () => {
     const [checked, setChecked] = useState(false);
 
     return (
-        <div id='subscribe-us' className='relative z-30 top-10 mt-24 md:mt-36 lg:mt-60 mb-[48rem] md:mb-54 lg:mb-60 xl:mb-96'>
+        <div id='subscribe-us' className='relative z-30 top-10 mt-24 md:mt-36 lg:mt-60 mb-[48rem] md:mb-54 lg:mb-60 xl:mb-[70vh]'>
             <div id='subscribe'>
                 <div className='px-2 xsm:px-0 mx-auto xxl:max-w-screen-xxl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm xsm:max-w-screen-xsm'>
                     <div className='flex flex-col-reverse md:flex-row justify-between h-full'>
