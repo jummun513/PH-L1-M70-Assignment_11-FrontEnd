@@ -1,0 +1,18 @@
+#store-location {
+    background-image: url('../../../images/map.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+#store-location #overlay {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+}

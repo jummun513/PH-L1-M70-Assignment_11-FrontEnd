@@ -29,42 +29,30 @@ const Subscribe = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='md:w-1/2 md:shadow-2xl md:ps-5'>
-                            <div className='bg-[#87c123dc] px-5 py-10 rounded-lg'>
-                                <h3 className='text-white text-3xl'>Get In Touch</h3>
-                                <form className='pt-5'>
-                                    <div className="relative z-0 w-full mb-6 group">
-                                        <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-50 appearance-none focus:outline-none focus:ring-0 focus:border-gray-900 peer" placeholder=" " required />
-                                        <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
-                                    </div>
-                                    <div className="relative z-0 w-full mb-6 group">
-                                        <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-50 appearance-none focus:outline-none focus:ring-0 focus:border-gray-900 peer" placeholder=" " required />
-                                        <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
-                                    </div>
-                                    <div className="relative z-0 w-full mb-6 group">
-                                        <input type="password" name="repeat_password" id="floating_repeat_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-50 appearance-none focus:outline-none focus:ring-0 focus:border-gray-900 peer" placeholder=" " required />
-                                        <label htmlFor="floating_repeat_password" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
-                                    </div>
-                                    <div className="grid md:grid-cols-2 md:gap-6">
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-50 appearance-none focus:outline-none focus:ring-0 focus:border-gray-900 peer" placeholder=" " required />
-                                            <label htmlFor="floating_first_name" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
-                                        </div>
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="text" name="floating_last_name" id="floating_last_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-50 appearance-none focus:outline-none focus:ring-0 focus:border-gray-900 peer" placeholder=" " required />
-                                            <label htmlFor="floating_last_name" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start mb-6">
-                                        <div className="flex items-center h-5">
-                                            <input onClick={() => { setChecked(!checked) }} id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50" required />
-                                        </div>
-                                        <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Do you Agree with our terms & condition?</label>
-                                    </div>
-                                    <button disabled={!checked} type="submit" className={!checked ? "text-gray-500 bg-gray-200 font-semibold rounded-lg text-sm w-full sm:w-auto px-5 md:px-8 py-2.5 text-center" : "text-black bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded-lg text-sm w-full sm:w-auto md:px-8 px-5 py-2.5 text-center"}>{checked ? 'Register' : 'Disabled'}</button>
-                                    <div className="text-sm font-medium text-gray-900 mt-3">
-                                        Already have an account? <Link to='/login' className="text-gray-50 hover:underline ms-2">Login Here.</Link>
-                                    </div></form>
+                        <div class="md:w-1/2 md:shadow-2xl md:ps-5">
+                            <div className='bg-white px-5 py-10 rounded-lg'>
+                                <h3 className='text-gray-900 text-3xl'>Send To Us</h3>
+                                <div className='mt-8 md:mt-14'>
+                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Full Name</span>
+                                    <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                        type="text" placeholder="" />
+                                </div>
+                                <div class="mt-4 md:mt-8">
+                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Email</span>
+                                    <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                        type="text" />
+                                </div>
+                                <div class="mt-4 md:mt-8">
+                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Message</span>
+                                    <textarea style={{ resize: 'none' }}
+                                        class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                                </div>
+                                <div class="mt-4 md:mt-8">
+                                    <button
+                                        class="uppercase text-sm font-semibold md:font-bold tracking-wide bg-primary text-gray-100 p-3 rounded-lg w-full hover:bg-secondary focus:outline-none focus:shadow-outline">
+                                        Send Message
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
