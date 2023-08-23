@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { createContext, useState } from 'react';
+import { createContext, useRef, useState } from 'react';
 import './App.css';
 import Home from './components/pages/Home/Home';
 import Inventory from './components/pages/Inventory/Inventory';
@@ -11,6 +11,7 @@ import SignIn from './components/pages/SignIn/SignIn';
 import Registration from './components/pages/Registration/Registration';
 import ManageItem from './components/pages/ManageItem/ManageItem';
 import ConfirmModal from './components/shared/ConfirmModal/ConfirmModal';
+import CarDetail from './components/pages/Inventory/CarDetail/CarDetail';
 
 export const MyContext = createContext();
 
@@ -29,7 +30,6 @@ function App() {
 
   let hideCross = false;
 
-
   return (
     !preLoading &&
 
@@ -45,7 +45,8 @@ function App() {
         <Route path='/user=manage-all-items' element={<ManageItem></ManageItem>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/login' element={<SignIn openSignInModal={true} hideCross={true}></SignIn>}></Route>
-        <Route path='/modal' element={<ConfirmModal></ConfirmModal>}></Route>
+        <Route path='/single-car-details/:carId' element={<CarDetail></CarDetail>}></Route>
+        {/* <Route path='/modal' element={<ConfirmModal></ConfirmModal>}></Route> */}
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </MyContext.Provider>

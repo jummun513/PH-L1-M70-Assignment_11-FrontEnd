@@ -2,8 +2,14 @@ import React from 'react';
 import './CarCart.css';
 import { BsFillBookmarkPlusFill } from 'react-icons/bs';
 import { AiFillLike } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const CarCart = ({ data, liked, wished, user }) => {
+    const navigate = useNavigate();
+    const singleCarPage = id => {
+        navigate(`/single-car-details/${id}`);
+    }
+
     return (
         <div id='cart' className='p-3 pb-5 mx-3 xsm:mx-0'>
             <div className="cart-img-container max-w-80">
@@ -19,9 +25,7 @@ const CarCart = ({ data, liked, wished, user }) => {
                 </div>
                 <div className='flex justify-between items-center mt-5'>
                     <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
-                    {
-                        user ? <button type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Update</button> : <button type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Buy Now</button>
-                    }
+                    <button onClick={() => singleCarPage(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>{user ? 'Update' : 'Buy Now'}</button>
                 </div>
             </div>
         </div>
