@@ -12,6 +12,7 @@ import Registration from './components/pages/Registration/Registration';
 import ManageItem from './components/pages/ManageItem/ManageItem';
 import ConfirmModal from './components/shared/ConfirmModal/ConfirmModal';
 import CarDetail from './components/pages/Inventory/CarDetail/CarDetail';
+import CarUpdate from './components/pages/Inventory/CarUpdate/CarUpdate';
 
 export const MyContext = createContext();
 
@@ -46,6 +47,7 @@ function App() {
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/login' element={<SignIn openSignInModal={true} hideCross={true}></SignIn>}></Route>
         <Route path='/single-car-details/:carId' element={<CarDetail></CarDetail>}></Route>
+        <Route path='/update-car/:carId' element={<CarUpdate></CarUpdate>}></Route>
         {/* <Route path='/modal' element={<ConfirmModal></ConfirmModal>}></Route> */}
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

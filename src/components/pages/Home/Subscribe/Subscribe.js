@@ -29,27 +29,27 @@ const Subscribe = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-1/2 md:shadow-2xl md:ps-5">
+                        <div className="md:w-1/2 md:shadow-2xl md:ps-5">
                             <div className='bg-white px-5 py-10 rounded-lg'>
                                 <h3 className='text-gray-900 text-3xl'>Send To Us</h3>
                                 <div className='mt-8 md:mt-14'>
-                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Full Name</span>
-                                    <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                    <span className="uppercase text-sm text-gray-600 font-semibold md:font-bold">Full Name</span>
+                                    <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="text" placeholder="" />
                                 </div>
-                                <div class="mt-4 md:mt-8">
-                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Email</span>
-                                    <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                <div className="mt-4 md:mt-8">
+                                    <span className="uppercase text-sm text-gray-600 font-semibold md:font-bold">Email</span>
+                                    <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="text" />
                                 </div>
-                                <div class="mt-4 md:mt-8">
-                                    <span class="uppercase text-sm text-gray-600 font-semibold md:font-bold">Message</span>
+                                <div className="mt-4 md:mt-8">
+                                    <span className="uppercase text-sm text-gray-600 font-semibold md:font-bold">Message</span>
                                     <textarea style={{ resize: 'none' }}
-                                        class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                                        className="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                                 </div>
-                                <div class="mt-4 md:mt-8">
+                                <div className="mt-4 md:mt-8">
                                     <button
-                                        class="uppercase text-sm font-semibold md:font-bold tracking-wide bg-primary text-gray-100 p-3 rounded-lg w-full hover:bg-secondary focus:outline-none focus:shadow-outline">
+                                        className="uppercase text-sm font-semibold md:font-bold tracking-wide bg-primary text-gray-100 p-3 rounded-lg w-full hover:bg-secondary focus:outline-none focus:shadow-outline">
                                         Send Message
                                     </button>
                                 </div>

@@ -25,7 +25,7 @@ const CarCart = ({ data, liked, wished, user }) => {
                 </div>
                 <div className='flex justify-between items-center mt-5'>
                     <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
-                    <button onClick={() => singleCarPage(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>{user ? 'Update' : 'Buy Now'}</button>
+                    <button onClick={() => singleCarPage(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>{user ? 'Update' : 'See Details'}</button>
                 </div>
             </div>
         </div>
