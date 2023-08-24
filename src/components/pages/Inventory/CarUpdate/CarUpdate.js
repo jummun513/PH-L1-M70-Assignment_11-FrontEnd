@@ -7,8 +7,11 @@ import { MyContext } from '../../../../App';
 import SingIn from '../../SignIn/SignIn';
 import Navbar from '../../../shared/Navbar/Navbar';
 import axios from 'axios';
+import ConfirmModal from '../../../shared/ConfirmModal/ConfirmModal';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import Processing from '../../../shared/Processing/Processing';
 
-const CarUpdate = ({ liked, wished, user }) => {
+const CarUpdate = () => {
     const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
     const { carId } = useParams();
     const [car, loading, serCar] = useFetchData(`http://localhost:5000/car/${carId}`);
@@ -23,11 +26,44 @@ const CarUpdate = ({ liked, wished, user }) => {
     const [confirmModal, setConfirmModal] = useState(false);
     const [formData, setFormData] = useState({});
     const [postLoading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
+    const targetLockelement = document.querySelector('#openConfirm');
+
+    useEffect(() => {
+        if (Object.keys(formData).length !== 0) {
+            const url = 'http://localhost:5000/cars';
+
+            const postData = async () => {
+                try {
+                    setLoading(true);
+                    const { data } = await axios.post(url, formData)
+                    setLoading(false);
+                } catch (error) {
+                    console.error(error);
+                    setLoading(false);
+                }
+            }
+            postData();
+            navigate('/user=manage-all-items');
+        }
+    }, [formData]);
+
+
+    const componentDidMount = () => {
+        setConfirmModal(true);
+        disableBodyScroll(targetLockelement);
+    };
+    const componentWillUnmount = () => {
+        setConfirmModal(false);
+        clearAllBodyScrollLocks();
+    };
 
     const handleOnClick = () => {
         setFormData({
-            car: dealer.current.value, car_model: model.current.value, car_model_year: year.current.value,
+            car: dealer.current.value,
+            car_model: model.current.value,
+            car_model_year: year.current.value,
             car_color: color.current.value,
             quantity: quantity.current.value,
             price: price.current.value,
@@ -35,23 +71,8 @@ const CarUpdate = ({ liked, wished, user }) => {
         });
     }
 
-    useEffect(() => {
-        const url = 'http://localhost:5000/cars';
-        const postData = async () => {
-            try {
-                setLoading(true);
-                const { data } = await axios.post(url, formData);
-                setLoading(false);
-            } catch (error) {
-                console.error(error);
-                setLoading(false);
-            }
-        }
-        postData();
-    }, [formData]);
-
     return (
-        <div className={(openSignInModal) ? 'modal-parent-height svg-container' : 'svg-container'} >
+        <div id='openConfirm' className={(openSignInModal) ? 'modal-parent-height svg-container' : 'svg-container'} >
             <div className='absolute w-full z-50'>
                 {
                     openSignInModal
@@ -108,12 +129,17 @@ const CarUpdate = ({ liked, wished, user }) => {
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div className='flex justify-end items-center mt-10'>
-                                        <input onClick={() => { setConfirmModal(true); handleOnClick() }} type="submit" className='cursor-pointer btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary' value='Confirm' />
+                                    <div className='flex justify-center items-center mt-10'>
+                                        {
+                                            postLoading ? <div className='w-1/2'><Processing></Processing></div> :
+                                                <input onClick={componentDidMount} type="submit" className='cursor-pointer w-1/2 btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary' value='Confirm' />}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                }
+                {
+                    confirmModal && <div><ConfirmModal componentWillUnmount={componentWillUnmount} okAction={handleOnClick} from={'update'}></ConfirmModal></div>
                 }
             </div>
             <Footer></Footer>
