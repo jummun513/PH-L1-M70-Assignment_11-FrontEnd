@@ -29,7 +29,7 @@ const Inventory = () => {
                 <h1 className='text-primary text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>All Listing Cars</h1>
                 <div id='cart-container' className='gap-7 mt-10 md:mt-20'>
                     {
-                        loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished} user={user}></CarCart>))
+                        loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished} user={user} from='inventory'></CarCart>))
                     }
                 </div>
             </div>

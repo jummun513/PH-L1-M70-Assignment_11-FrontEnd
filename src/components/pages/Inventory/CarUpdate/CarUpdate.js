@@ -28,11 +28,11 @@ const CarUpdate = () => {
     const [postLoading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const targetLockelement = document.querySelector('#openConfirm');
+    const cost = (car.price !== undefined) && car?.price.split(' ');
 
     useEffect(() => {
         if (Object.keys(formData).length !== 0) {
-            const url = 'http://localhost:5000/cars';
+            const url = `http://localhost:5000/update-car/${carId}`;
 
             const postData = async () => {
                 try {
@@ -50,6 +50,7 @@ const CarUpdate = () => {
     }, [formData]);
 
 
+    const targetLockelement = document.querySelector('#openConfirm');
     const componentDidMount = () => {
         setConfirmModal(true);
         disableBodyScroll(targetLockelement);
@@ -66,10 +67,10 @@ const CarUpdate = () => {
             car_model_year: year.current.value,
             car_color: color.current.value,
             quantity: quantity.current.value,
-            price: price.current.value,
+            price: `$ ${price.current.value}`,
             img: image.current.value
         });
-    }
+    };
 
     return (
         <div id='openConfirm' className={(openSignInModal) ? 'modal-parent-height svg-container' : 'svg-container'} >
@@ -116,7 +117,8 @@ const CarUpdate = () => {
                                                 </tr>
                                                 <tr className='flex justify-between items-center mt-2 sm:mt-4'>
                                                     <th className='text-xs py-3 md:py-5 md:text-base w-[49%] md:w-[48%] border border-gray-200 px-3'>Price :</th>
-                                                    <td className='w-[50%]'><input ref={price} type="text" defaultValue={car.price} id="price" name="price" className='h-full w-full text-xs md:text-base py-3 md:py-5 px-3 border text-gray-950 border-gray-200 hover:border-primary focus:border-gray-50 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary' /></td>
+                                                    <td className='w-[50%] relative'><span className='absolute top-[30%] left-3'>$</span>
+                                                        <input ref={price} type="number" defaultValue={cost[1]} id="price" name="price" className='h-full w-full text-xs md:text-base py-3 md:py-5 px-2 ps-5 md:ps-10 md:px-3 border text-gray-950 border-gray-200 hover:border-primary focus:border-gray-50 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary' /></td>
                                                 </tr>
                                                 <tr className='flex justify-between items-center mt-2 sm:mt-4'>
                                                     <th className='text-xs py-3 md:py-5 md:text-base w-[49%] md:w-[48%] border border-gray-200 px-3'>Manufacturer :</th>
@@ -132,7 +134,7 @@ const CarUpdate = () => {
                                     <div className='flex justify-center items-center mt-10'>
                                         {
                                             postLoading ? <div className='w-1/2'><Processing></Processing></div> :
-                                                <input onClick={componentDidMount} type="submit" className='cursor-pointer w-1/2 btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary' value='Confirm' />}
+                                                <input onClick={componentDidMount} type="submit" className='cursor-pointer w-1/2 btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary' value='Update' />}
                                     </div>
                                 </div>
                             </div>

@@ -13,7 +13,7 @@ const Listing = () => {
             <h1 className='text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-3xl text-center'>Featured Listing</h1>
             <div id='cart-container' className='gap-7 mt-7 md:mt-14'>
                 {
-                    loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished} user={user}></CarCart>))
+                    loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} wished={isWished} user={user} from='listing'></CarCart>))
                 }
             </div>
         </div>
