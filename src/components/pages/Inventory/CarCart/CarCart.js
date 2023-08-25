@@ -4,7 +4,7 @@ import { BsFillBookmarkPlusFill } from 'react-icons/bs';
 import { AiFillLike } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
-const CarCart = ({ data, liked, wished, from }) => {
+const CarCart = ({ data, liked, deleteBtn, wished, from }) => {
     const navigate = useNavigate();
     const singleCarPage = id => {
         navigate(`/single-car-details/${id}`);
@@ -30,7 +30,7 @@ const CarCart = ({ data, liked, wished, from }) => {
                 {
                     ((from === 'manage') &&
                         <div className='flex justify-between items-center mt-5'>
-                            <button onClick={() => singleCarPage(data._id)} type="button" className='btn-style text-white bg-red-600 hover:bg-red-700'>Delete</button>
+                            <button onClick={() => deleteBtn(data._id, data.car)} type="button" className='btn-style text-white bg-red-600 hover:bg-red-700'>Delete</button>
                             <button onClick={() => navigateToUpdate(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Update</button>
                         </div>)
                     ||
