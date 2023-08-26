@@ -3,10 +3,12 @@ import './Registration.css';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 import { app } from '../../../firebase.init';
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from "firebase/auth";
 import { BiShow, BiHide } from 'react-icons/bi'
 import { MyContext } from '../../../App';
 import Processing from '../../shared/Processing/Processing';
+import SuccessModal from '../../shared/SuccessModal/SuccessModal';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 const auth = getAuth(app);
 
@@ -24,6 +26,7 @@ const Registration = () => {
     const [error, setError] = useState('');
     const [process, setProcess] = useState(false);
     const navigate = useNavigate();
+    const [openModal, setOpenModal] = useState(false);
 
 
     const handleEmailField = event => {
@@ -70,6 +73,23 @@ const Registration = () => {
     const handleLastNameField = event => {
     }
 
+    const targetLockelement = document.querySelector('#openModal');
+    const componentDidMount = () => {
+        setOpenModal(true);
+        disableBodyScroll(targetLockelement);
+    };
+    const componentWillUnmount = () => {
+        setOpenModal(false);
+        clearAllBodyScrollLocks();
+    };
+
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                componentDidMount();
+            });
+    }
+
     const formSubmit = (event) => {
         setProcess(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -78,7 +98,7 @@ const Registration = () => {
                 setDisplayUser(user);
                 setError('');
                 setProcess(false);
-                navigate('/home');
+                verifyEmail();
             })
             .catch((error) => {
                 setError(error.message);
@@ -91,7 +111,7 @@ const Registration = () => {
 
     return (
         <div id='register' className='xl:max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm xsm:max-w-screen-sm px-2 md:px-0 mx-auto'>
-            <div className='bg-[#87c123dc] px-5 py-10 rounded-lg shadow-2xl'>
+            <div id='openModal' className='bg-[#87c123dc] px-5 py-10 rounded-lg shadow-2xl'>
                 <h3 className='text-white text-3xl'>Register With Email</h3>
                 <form className='pt-5 md:pt-7' onSubmit={formSubmit}>
                     <div className="relative z-0 w-full mb-6 group">
@@ -161,6 +181,9 @@ const Registration = () => {
                 </form>
                 <SocialLogin></SocialLogin>
             </div>
+            {
+                openModal && <SuccessModal okAction={navigate} from='register' componentWillUnmount={componentWillUnmount}></SuccessModal>
+            }
         </div>
     );
 };

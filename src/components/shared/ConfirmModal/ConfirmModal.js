@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const ConfirmModal = ({ componentWillUnmount, from, okAction, targetTitleFromDelete }) => {
     const [check, setCheck] = useState(false);
+    const [email, setEmail] = useState('');
     const handleInput = event => {
         (event.target.value === targetTitleFromDelete) && setCheck(true);
     }
@@ -32,7 +33,7 @@ const ConfirmModal = ({ componentWillUnmount, from, okAction, targetTitleFromDel
                                     )
                                 }
                                 <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <h3 className="text-base font-semibold leading-6 text-gray-900" id="modal-title">{(from === 'delete') ? 'Permanently delete?' : 'Are You Sure?'}</h3>
+                                    <h3 className="text-base font-semibold leading-6 text-gray-900" id="modal-title">{((from === 'delete') && 'Permanently delete?') || ((from === 'update') && 'Are You Sure') || ((from === 'forgetPass') && 'Email')}</h3>
                                     <div className="mt-2">
                                         {
                                             ((from === 'update') && <p className="text-xs md:text-sm text-gray-500">This will change in our storage database. Previous data will merge and can not get recover.</p>)
@@ -41,6 +42,10 @@ const ConfirmModal = ({ componentWillUnmount, from, okAction, targetTitleFromDel
                                                 <p className="text-xs md:text-sm text-gray-500">This will change in our storage database. And you will lose your data. For confirm rewrite the sentence <span className='text-red-600 sm:text-sm md:text-base font-semibold'>'{targetTitleFromDelete}'</span> again.</p>
                                                 <input onChange={handleInput} type="text" className='bg-slate-50 px-3 py-2 text-sm w-full border-2 border-red-200 mt-2 rounded focus:outline-red-600' placeholder={targetTitleFromDelete} />
                                             </div>)
+                                            ||
+                                            ((from === 'forgetPass') &&
+                                                <input onBlur={(e) => setEmail(e.target.value)} type="text" className='bg-slate-50 px-3 py-2 text-sm w-full sm:w-96 border-2 border-lime-200 outline-none mt-2 rounded focus:outline-primary focus:border-none' placeholder={targetTitleFromDelete} />
+                                            )
                                         }
                                     </div>
                                 </div>
@@ -54,6 +59,10 @@ const ConfirmModal = ({ componentWillUnmount, from, okAction, targetTitleFromDel
                                 ||
                                 ((from === 'delete') &&
                                     <button disabled={!check} onClick={() => { okAction(); componentWillUnmount(); }} type="button" className={`inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm sm:ml-3 sm:w-auto ${check ? 'bg-red-600 hover:bg-red-700' : 'bg-red-400'}`}>{check ? 'Confirm' : 'Disabled'}</button>
+                                )
+                                ||
+                                ((from === 'forgetPass') &&
+                                    <button onClick={() => { okAction(email); componentWillUnmount(); }} type="button" className='inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm sm:ml-3 sm:w-auto bg-primary hover:bg-secondary'>Send</button>
                                 )
 
                             }

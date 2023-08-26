@@ -3,12 +3,14 @@ import './SignIn.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { getAuth } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { app } from '../../../firebase.init';
 import { MyContext } from '../../../App';
 import { BiHide, BiShow } from 'react-icons/bi';
 import Processing from '../../shared/Processing/Processing';
 import Navbar from '../../shared/Navbar/Navbar';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
+import ConfirmModal from '../../shared/ConfirmModal/ConfirmModal';
 
 const auth = getAuth(app);
 
@@ -21,6 +23,8 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const location = useLocation();
+    const [confirmModal, setConfirmModal] = useState(false);
+    const [toastShow, setToastShow] = useState(false);
 
     let from = location.state?.from?.pathname || '/home';
 
@@ -52,12 +56,47 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
         }
     }, [user]);
 
+    const targetLockelement = document.querySelector('#openConfirm');
+    const componentDidMount = () => {
+        setConfirmModal(true);
+        disableBodyScroll(targetLockelement);
+    };
+    const componentWillUnmount = () => {
+        setConfirmModal(false);
+        clearAllBodyScrollLocks();
+    };
+
+    const handleForget = (email) => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                setToastShow(true);
+            })
+    }
+
     return (
-        <div className={`${(hideCross === true) && 'svg-container'}`}>
+        <div id='openConfirm' className={`${(hideCross === true) && 'svg-container'}`}>
             <div><Navbar hideCross={hideCross}></Navbar></div>
-            <div id='login-modal' className={`${openSignInModal ? 'active' : 'hidden'} ${hideCross === true ? 'bg-transparent top-48' : 'bg-[#eff5ffd3] z-[1001] h-[100vh]'}`}>
+            <div id='login-modal' className={`${openSignInModal ? 'active' : 'hidden'} ${hideCross === true ? 'bg-transparent top-32 md:top-48' : 'bg-[#eff5ffd3] z-[1001] h-[100vh]'}`}>
                 <div className='modal-container w-auto xsm:w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[50rem]'>
                     <div className="relative bg-white rounded-lg shadow-2xl">
+                        {
+                            toastShow &&
+                            <div id="toast-success" className="relative z-[1500] top-14 mx-auto flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow border border-lime-200" role="alert">
+                                <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
+                                    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                    </svg>
+                                    <span className="sr-only">Check icon</span>
+                                </div>
+                                <div className="ml-3 text-sm font-normal">Reset email sent, successfully.</div>
+                                <button onClick={() => setToastShow(!toastShow)} type="button" className="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
+                                    <span className="sr-only">Close</span>
+                                    <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        }
                         <button type="button" onClick={() => { setOpenSignInModal(false) }} className={hideCross ? 'hidden' : "absolute top-3 right-2.5 text-secondary bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"}>
                             <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -84,7 +123,7 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
                                         </div>
                                         <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Remember me</label>
                                     </div>
-                                    <a href="/" className="text-sm text-secondary hover:underline">Forgot Password?</a>
+                                    <Link onClick={() => componentDidMount()} className="text-sm text-secondary hover:underline">Forgot Password?</Link>
                                 </div>
                                 {
                                     (displayError.includes('wrong-password') && <p className='md:text-sm text-[12px] font-semibold md:my-2 my-1 text-red-500'>Your password is wrong!</p>) ||
@@ -104,6 +143,9 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
                     </div>
                 </div>
             </div>
+            {
+                confirmModal && <ConfirmModal from='forgetPass' okAction={handleForget} componentWillUnmount={componentWillUnmount}></ConfirmModal>
+            }
         </div>
     );
 };
