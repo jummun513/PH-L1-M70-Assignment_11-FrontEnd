@@ -6,7 +6,8 @@ import { getAuth } from 'firebase/auth';
 import { app } from '../../../firebase.init';
 import { MyContext } from '../../../App';
 import Processing from '../Processing/Processing';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const auth = getAuth(app);
 
@@ -15,6 +16,18 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const [errorElement, setErrorElement] = useState('');
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || '/home';
+
+    useEffect(() => {
+        if (user) {
+            setDisplayUser(user);
+            setErrorElement('');
+            setOpenSignInModal(false);
+            navigate(from, { replace: true });
+        }
+    }, [user]);
 
     useEffect(() => {
         if (error) {
@@ -23,14 +36,7 @@ const SocialLogin = () => {
     }, [error]);
 
     // The React.js warning "Cannot update a component while rendering a different component"
-    useEffect(() => {
-        if (user) {
-            setDisplayUser(user);
-            setErrorElement('');
-            navigate('/home');
-            setOpenSignInModal(false);
-        }
-    }, [user]);
+
 
     return (
         <>

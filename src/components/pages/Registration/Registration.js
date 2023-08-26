@@ -3,7 +3,7 @@ import './Registration.css';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../shared/SocialLogin/SocialLogin';
 import { app } from '../../../firebase.init';
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { BiShow, BiHide } from 'react-icons/bi'
 import { MyContext } from '../../../App';
 import Processing from '../../shared/Processing/Processing';
@@ -36,8 +36,6 @@ const Registration = () => {
             return;
         }
     }
-    useEffect(() => { }, [email]);
-
 
     const checkPasswordValidation = event => {
         let pass = event.target.value;
@@ -69,7 +67,6 @@ const Registration = () => {
 
     const handleFirstNameField = event => {
     }
-
     const handleLastNameField = event => {
     }
 

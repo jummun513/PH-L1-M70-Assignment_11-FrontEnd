@@ -1,5 +1,20 @@
+#sidebar a.active {
+    background-color: #88C123;
+    color: white;
+}
+
+.sidebar a.active {
+    color: black;
+}
+
 @media screen and (min-width:768px) {
     #sidebar a.active {
         background-color: #88C123;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .sidebar a.active {
+        color: black;
     }
 }

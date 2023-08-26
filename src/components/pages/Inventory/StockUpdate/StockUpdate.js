@@ -51,15 +51,16 @@ const StockUpdate = ({ liked, wished, user }) => {
     }, [formData]);
 
 
-    const targetLockelement = document.querySelector('#openConfirm');
-    const componentDidMount = () => {
-        setConfirmModal(true);
-        disableBodyScroll(targetLockelement);
-    };
-    const componentWillUnmount = () => {
-        setConfirmModal(false);
-        clearAllBodyScrollLocks();
-    };
+    // For body back ground stack
+    // const targetLockelement = document.querySelector('#openConfirm');
+    // const componentDidMount = () => {
+    //     setConfirmModal(true);
+    //     disableBodyScroll(targetLockelement);
+    // };
+    // const componentWillUnmount = () => {
+    //     setConfirmModal(false);
+    //     clearAllBodyScrollLocks();
+    // };
 
 
     return (
@@ -103,13 +104,13 @@ const StockUpdate = ({ liked, wished, user }) => {
                                                 </tr>
                                                 <tr className='border-b border-b-gray-200'>
                                                     <th rowSpan={2} className='text-xs w-1/2 row-span-2 md:text-base px-3 py-5 border-r border-r-gray-200'>{car.quantity}</th>
-                                                    <td className='text-xs w-1/2 md:text-base'><input onClick={() => handleDelivered()} className='px-5 py-2 border border-orange-500 cursor-pointer duration-150 ease-linear my-5 bg-orange-500 text-gray-50 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 rounded-lg text-sm' type="button" value='Delivered One' /></td>
+                                                    <td className='text-xs w-1/2 md:text-base'><input onClick={() => handleDelivered()} className='px-2 md:px-5 py-2 mx-1 border border-orange-500 cursor-pointer duration-150 ease-linear my-5 bg-orange-500 text-gray-50 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 rounded-lg text-sm' type="button" value='Delivered One' /></td>
                                                 </tr>
                                                 <tr className='border-b border-b-gray-200'>
                                                     <td className='text-xs w-1/2 py-5 md:text-base'>
-                                                        <div className="relative md:w-2/3 mx-auto md:block flex flex-col justify-center px-2 md:px-0">
-                                                            <input type="number" min={0} step={1} pattern="[0-9]*" onChange={(e) => setRestock((v) => (e.target.validity.valid ? e.target.value : v))} id="restock" value={restock} className="block md:w-full p-2 md:p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-primary" placeholder='Number only' required />
-                                                            <button onClick={() => { handleRestock() }} type="submit" className="text-white mt-2 md:mt-0 md:absolute right-2.5 bottom-2.5 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-4 py-2">Re-Stock</button>
+                                                        <div className="relative w-full sm:w-2/3 mx-auto md:block flex flex-col justify-center px-2 md:px-0">
+                                                            <input type="number" min={0} step={1} pattern="[0-9]*" onChange={(e) => setRestock((v) => (e.target.validity.valid ? e.target.value : v))} id="restock" value={restock} className="block w-full p-2 md:p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-primary" placeholder='Number only' required />
+                                                            <button onClick={() => { handleRestock() }} type="submit" className="text-white mt-2 md:mt-0 md:absolute md:right-2.5 md:bottom-2.5 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-4 py-2">Re-Stock</button>
                                                         </div></td>
                                                 </tr>
                                             </tbody>
