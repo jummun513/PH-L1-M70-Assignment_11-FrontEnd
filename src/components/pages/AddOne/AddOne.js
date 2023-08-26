@@ -113,21 +113,21 @@ const AddOne = () => {
                         </div>
                         <div className="mb-6">
                             <label htmlFor="release" className="md:text-base block mb-2 text-sm font-semibold text-gray-900">Release Year</label>
-                            <input onChange={e => setYear(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="release" id="release" placeholder='2019' />
+                            <input onChange={e => setYear(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" min={0} step={0} name="release" id="release" placeholder='2019' />
                             {
                                 !year && <p className='text-xs mt-1 sm:text-sm text-red-600'>This field is required.</p>
                             }
                         </div>
                         <div className="mb-6">
                             <label htmlFor="car_price" className="md:text-base block mb-2 text-sm font-semibold text-gray-900">Single Item Price. (In US Dollar - $)</label>
-                            <input onChange={e => setPrice(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" step={0.01} name="car_price" id="car_price" placeholder='1265.12' />
+                            <input onChange={e => setPrice(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" min={0.00} step={0.00} name="car_price" id="car_price" placeholder='1265.12' />
                             {
                                 !price && <p className='text-xs mt-1 sm:text-sm text-red-600'>This field is required.</p>
                             }
                         </div>
                         <div className="mb-6">
                             <label htmlFor="quantity" className="md:text-base block mb-2 text-sm font-semibold text-gray-900">Available Quantity</label>
-                            <input onChange={e => setQuantity(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" name="quantity" id="quantity" placeholder='10' />
+                            <input onChange={e => setQuantity(e.target.value)} className='md:text-base bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="number" min={0} step={0} name="quantity" id="quantity" placeholder='10' />
                             {
                                 !quantity && <p className='text-xs mt-1 sm:text-sm text-red-600'>This field is required.</p>
                             }

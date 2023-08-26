@@ -16,8 +16,8 @@ const CarDetail = ({ liked, wished, user }) => {
     const [car, loading, serCar] = useFetchData(`http://localhost:5000/car/${carId}`);
 
     const navigate = useNavigate();
-    const carUpdatePage = id => {
-        navigate(`/user=manage-all-items/update-item/${id}`);
+    const StockPage = id => {
+        navigate(`/user=car-stock-manage/${id}`);
     }
 
 
@@ -78,7 +78,7 @@ const CarDetail = ({ liked, wished, user }) => {
                                     </div>
                                     <div className='flex justify-between items-center mt-10'>
                                         <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
-                                        <button onClick={() => carUpdatePage(car._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Manage Item</button>
+                                        <button onClick={() => StockPage(car._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Manage Stock</button>
                                     </div>
                                 </div>
                             </div>

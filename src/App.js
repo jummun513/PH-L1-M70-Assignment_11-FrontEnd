@@ -15,6 +15,7 @@ import CarDetail from './components/pages/Inventory/CarDetail/CarDetail';
 import CarUpdate from './components/pages/Inventory/CarUpdate/CarUpdate';
 import SuccessModal from './components/shared/SuccessModal/SuccessModal';
 import ErrorModal from './components/shared/ErrorModal/ErrorModal';
+import StockUpdate from './components/pages/Inventory/StockUpdate/StockUpdate';
 
 export const MyContext = createContext();
 
@@ -50,6 +51,7 @@ function App() {
         <Route path='/login' element={<SignIn openSignInModal={true} hideCross={true}></SignIn>}></Route>
         <Route path='/single-car-details/:carId' element={<CarDetail></CarDetail>}></Route>
         <Route path='/user=manage-all-items/update-item/:carId' element={<CarUpdate></CarUpdate>}></Route>
+        <Route path='/user=car-stock-manage/:carId' element={<StockUpdate></StockUpdate>}></Route>
         {/* <Route path='/modal' element={<ConfirmModal></ConfirmModal>}></Route>
         <Route path='/success' element={<SuccessModal></SuccessModal>}></Route>
         <Route path='/error' element={<ErrorModal></ErrorModal>}></Route> */}
