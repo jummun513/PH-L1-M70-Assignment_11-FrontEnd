@@ -19,11 +19,12 @@ import { getAuth } from 'firebase/auth';
 import { app } from './firebase.init';
 import Wishlist from './components/pages/Wishlist/Wishlist';
 import LikedItem from './components/pages/LikedItem/LikedItem';
+import Test from './test';
+import axios from 'axios';
+import useFetchData from './hooks/useFetchData';
 
 
 const auth = getAuth(app);
-
-
 export const MyContext = createContext();
 
 
@@ -32,10 +33,40 @@ function App() {
   const [preLoading, setPreLoading] = useState(true);
   const [user] = useAuthState(auth);
   const [displayUser, setDisplayUser] = useState(null);
+  const [wishedItem, setWishedItem] = useState({});
+  const [postLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (user) { (displayUser === null) && setDisplayUser(user) };
-  }, [user, displayUser]);
+    if (user && (displayUser === null)) { setDisplayUser(user) };
+  }, [user]);
+
+  useEffect(() => {
+    if (displayUser !== null) {
+      setWishedItem({
+        email: displayUser.email,
+        wishedItemId: [],
+      })
+    }
+  }, [displayUser]);
+
+  useEffect(() => {
+    if ((Object.keys(wishedItem).length !== 0)) {
+      const url = `http://localhost:5000/users`;
+
+      const postData = async () => {
+        try {
+          setLoading(true);
+          const { data } = await axios.post(url, wishedItem)
+          setLoading(false);
+        } catch (error) {
+          console.error(error);
+          setLoading(false);
+        }
+      }
+      postData();
+    }
+  }, [wishedItem])
+
 
   const spinner = document.getElementById('spinner');
   if (spinner) {
@@ -50,7 +81,7 @@ function App() {
   return (
     !preLoading &&
 
-    <MyContext.Provider value={{ openSignInModal, setOpenSignInModal, hideCross, displayUser, setDisplayUser }}>
+    <MyContext.Provider value={{ wishedItem, setWishedItem, openSignInModal, setOpenSignInModal, hideCross, displayUser, setDisplayUser }}>
       <Routes>
         {["/home", "/"].map((path, index) =>
           <Route path={path} element={<Home></Home>} key={index} />
@@ -67,6 +98,7 @@ function App() {
         <Route path='/user=car-stock-manage/:carId' element={<RequireAuth><StockUpdate></StockUpdate></RequireAuth>}></Route>
         <Route path='/user=wishlist' element={<RequireAuth><Wishlist></Wishlist></RequireAuth>}></Route>
         <Route path='/user=liked-items' element={<RequireAuth><LikedItem></LikedItem></RequireAuth>}></Route>
+        <Route path='/test' element={<Test></Test>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </MyContext.Provider>

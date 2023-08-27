@@ -76,9 +76,9 @@ const CarDetail = ({ liked, wished, user }) => {
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div className='flex justify-between items-center mt-10'>
-                                        <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
-                                        <button onClick={() => StockPage(car._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Manage Stock</button>
+                                    <div className='flex justify-center items-center mt-10'>
+                                        {/* <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div> */}
+                                        <button onClick={() => StockPage(car._id)} type="button" className='btn-style w-full md:w-2/3 border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Manage Stock</button>
                                     </div>
                                 </div>
                             </div>

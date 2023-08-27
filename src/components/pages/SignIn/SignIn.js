@@ -11,6 +11,7 @@ import Processing from '../../shared/Processing/Processing';
 import Navbar from '../../shared/Navbar/Navbar';
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import ConfirmModal from '../../shared/ConfirmModal/ConfirmModal';
+import axios from 'axios';
 
 const auth = getAuth(app);
 
@@ -25,6 +26,7 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
     const location = useLocation();
     const [confirmModal, setConfirmModal] = useState(false);
     const [toastShow, setToastShow] = useState(false);
+    const [remember, setRemember] = useState(false);
 
     let from = location.state?.from?.pathname || '/home';
 
@@ -36,9 +38,13 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
         setPassword(event.target.value);
     }
 
-    const handleSignInForm = event => {
-        signInWithEmailAndPassword(email, password);
+    const handleSignInForm = async (event) => {
         event.preventDefault();
+        await signInWithEmailAndPassword(email, password);
+        if (remember) {
+            const { data } = await axios.post('http://localhost:5000/login', { email });
+            localStorage.setItem('accessToken', data);
+        }
     }
 
     useEffect(() => {
@@ -119,7 +125,7 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
                                 <div className="flex justify-between">
                                     <div className="flex items-start">
                                         <div className="flex items-center h-5">
-                                            <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 focus:ring-4 focus:ring-primary" />
+                                            <input onClick={() => setRemember(!remember)} id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 focus:ring-4 focus:ring-primary" />
                                         </div>
                                         <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900">Remember me</label>
                                     </div>

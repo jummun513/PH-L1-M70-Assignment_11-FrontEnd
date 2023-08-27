@@ -1,11 +1,51 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './CarCart.css';
 import { BsFillBookmarkPlusFill } from 'react-icons/bs';
 import { AiFillLike } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../../../App';
+import axios from 'axios';
 
-const CarCart = ({ data, liked, deleteBtn, wished, from }) => {
+const CarCart = ({ data, liked, deleteBtn, from }) => {
+    const { displayUser, wishedItem, setWishedItem } = useContext(MyContext);
     const navigate = useNavigate();
+    const [wishlist, setWishlist] = useState(false);
+    const [postLoading, setLoading] = useState(false);
+
+    useEffect(() => {
+        wishedItem.wishedItemId?.find(id => id == data._id) && setWishlist(true);
+    }, [data._id])
+
+    const handleWishlist = (id) => {
+        const remaining = wishedItem.wishedItemId?.filter(_id => _id !== id);
+        setWishlist(!wishlist);
+        if (displayUser !== null) {
+            if (wishlist === false) {
+                setWishedItem(prevData => ({
+                    ...prevData,
+                    wishedItemId: [...remaining, id]
+                }));
+            }
+            else {
+                setWishedItem(prevData => ({
+                    ...prevData,
+                    wishedItemId: [...remaining]
+                }));
+            }
+        }
+        else {
+            navigate('/login');
+        }
+    }
+
+
+    const postData = () => {
+        console.log(wishedItem);
+
+    }
+    // post data to the backend server
+
+
     const singleCarPage = id => {
         navigate(`/single-car-details/${id}`);
     }
@@ -34,9 +74,9 @@ const CarCart = ({ data, liked, deleteBtn, wished, from }) => {
                             <button onClick={() => navigateToUpdate(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>Update</button>
                         </div>)
                     ||
-                    ((from === 'inventory' || 'listing') &&
+                    ((from === 'inventory' || 'listing' || 'wishlist') &&
                         <div className='flex justify-between items-center mt-5'>
-                            <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill title='Add to wish-list.' fill={wished ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
+                            <div className='flex justify-between items-center'><AiFillLike title='Like' className='h-8 w-8 mr-3 cursor-pointer' fill={liked ? '#88C123' : '#87c12361'}></AiFillLike> <BsFillBookmarkPlusFill onClick={() => handleWishlist(data._id)} title='Add to wish-list.' fill={wishlist ? '#88C123' : '#87c12361'} className='h-7 w-7 cursor-pointer'></BsFillBookmarkPlusFill></div>
                             <button onClick={() => singleCarPage(data._id)} type="button" className='btn-style border-2 border-primary text-white bg-primary hover:bg-transparent hover:text-primary'>See Details</button>
                         </div>)
                 }
