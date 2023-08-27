@@ -41,31 +41,23 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    if (displayUser !== null) {
-      setWishedItem({
-        email: displayUser.email,
-        wishedItemId: [],
-      })
-    }
-  }, [displayUser]);
-
-  useEffect(() => {
-    if ((Object.keys(wishedItem).length !== 0)) {
-      const url = `http://localhost:5000/users`;
-
-      const postData = async () => {
+    if ((displayUser !== null) && (displayUser?.email !== undefined)) {
+      const url = `http://localhost:5000/user/${displayUser?.email}`;
+      const fetchUserData = async () => {
         try {
           setLoading(true);
-          const { data } = await axios.post(url, wishedItem)
+          const { data } = await axios.get(url);
+          setWishedItem(data);
           setLoading(false);
-        } catch (error) {
+        }
+        catch (error) {
           console.error(error);
           setLoading(false);
         }
       }
-      postData();
+      fetchUserData();
     }
-  }, [wishedItem])
+  }, [displayUser]);
 
 
   const spinner = document.getElementById('spinner');

@@ -12,7 +12,9 @@ const Wishlist = () => {
     const [isLiked, setLiked] = useState(false);
     const [isWished, setWished] = useState(false);
     const user = false;
-    const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
+    const { wishedItem, openSignInModal, setOpenSignInModal } = useContext(MyContext);
+
+    const remaining = cars.filter(car => wishedItem.wishedItemId.includes(car._id));
 
     return (
         <div className={openSignInModal ? 'modal-parent-height svg-container' : 'svg-container'} >
@@ -28,7 +30,7 @@ const Wishlist = () => {
                 <h1 className='text-primary text-base sm:text-lg md:text-xl lg:text-2xl xxl:text-5xl text-center'>All Listing Cars</h1>
                 <div id='cart-container' className='gap-7 mt-10 md:mt-20'>
                     {
-                        loading ? <Loading></Loading> : (cars.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} from='wishlist'></CarCart>))
+                        loading ? <Loading></Loading> : (remaining.map((data, idx) => <CarCart key={idx} data={data} liked={isLiked} from='wishlist'></CarCart>))
                     }
                 </div>
             </div>

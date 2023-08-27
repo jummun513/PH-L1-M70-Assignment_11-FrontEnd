@@ -11,12 +11,16 @@ const CarCart = ({ data, liked, deleteBtn, from }) => {
     const navigate = useNavigate();
     const [wishlist, setWishlist] = useState(false);
     const [postLoading, setLoading] = useState(false);
+    const [isButtonClicked, setButtonClicked] = useState(false);
 
     useEffect(() => {
-        wishedItem.wishedItemId?.find(id => id == data._id) && setWishlist(true);
-    }, [data._id])
+        if (displayUser !== null) {
+            wishedItem.wishedItemId?.find(id => id == data._id) && setWishlist(true);
+        }
+    }, [data._id, displayUser])
 
     const handleWishlist = (id) => {
+        setButtonClicked(true);
         const remaining = wishedItem.wishedItemId?.filter(_id => _id !== id);
         setWishlist(!wishlist);
         if (displayUser !== null) {
@@ -38,12 +42,25 @@ const CarCart = ({ data, liked, deleteBtn, from }) => {
         }
     }
 
+    useEffect(() => {
+        if (isButtonClicked) {
+            if ((Object.keys(wishedItem).length !== 0)) {
+                const url = `http://localhost:5000/users`;
 
-    const postData = () => {
-        console.log(wishedItem);
-
-    }
-    // post data to the backend server
+                const postData = async () => {
+                    try {
+                        setLoading(true);
+                        const { data } = await axios.post(url, wishedItem)
+                        setLoading(false);
+                    } catch (error) {
+                        console.error(error);
+                        setLoading(false);
+                    }
+                }
+                postData();
+            }
+        }
+    }, [wishlist])
 
 
     const singleCarPage = id => {
