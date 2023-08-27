@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { createContext, useEffect, useRef, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import Home from './components/pages/Home/Home';
 import Inventory from './components/pages/Inventory/Inventory';
@@ -19,9 +19,7 @@ import { getAuth } from 'firebase/auth';
 import { app } from './firebase.init';
 import Wishlist from './components/pages/Wishlist/Wishlist';
 import LikedItem from './components/pages/LikedItem/LikedItem';
-import Test from './test';
 import axios from 'axios';
-import useFetchData from './hooks/useFetchData';
 
 
 const auth = getAuth(app);
@@ -46,7 +44,11 @@ function App() {
       const fetchUserData = async () => {
         try {
           setLoading(true);
-          const { data } = await axios.get(url);
+          const { data } = await axios.get(url, {
+            headers: {
+              authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+          });
           setWishedItem(data);
           setLoading(false);
         }
@@ -90,7 +92,6 @@ function App() {
         <Route path='/user=car-stock-manage/:carId' element={<RequireAuth><StockUpdate></StockUpdate></RequireAuth>}></Route>
         <Route path='/user=wishlist' element={<RequireAuth><Wishlist></Wishlist></RequireAuth>}></Route>
         <Route path='/user=liked-items' element={<RequireAuth><LikedItem></LikedItem></RequireAuth>}></Route>
-        <Route path='/test' element={<Test></Test>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </MyContext.Provider>

@@ -17,6 +17,7 @@
 - I use react functions and components:
     - `custom hooks` for fetch data from the server.
     - `context api` for props drilling.
+    - `json web token` for secure api and avoid repeatedly login.
 
 
 ## Some Features of the project
@@ -25,3 +26,5 @@
     1. The project have beautiful responsive header with `Navbar` and `Banner`
     2. In the project have different 9 pages where some of are public and some of are protected by user login.
     3. The project have a beautiful `Login` and `Register` page with `validation` of form and handle firebase error.
+    4. The project have protected route/page
+    5. I implement a `WishList` route which is user login protected and the unique user api is secured with the help of ***jwt token***.
