@@ -13,7 +13,7 @@ import { AiFillLike } from 'react-icons/ai';
 const CarDetail = ({ liked, wished, user }) => {
     const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
     const { carId } = useParams();
-    const [car, loading, serCar] = useFetchData(`http://localhost:5000/car/${carId}`);
+    const [car, loading, serCar] = useFetchData(`https://server-auto-hive.vercel.app/car/${carId}`);
 
     const navigate = useNavigate();
     const StockPage = id => {

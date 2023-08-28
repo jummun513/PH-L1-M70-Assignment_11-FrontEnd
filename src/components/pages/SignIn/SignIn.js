@@ -42,7 +42,7 @@ const SingIn = ({ openSignInModal, setOpenSignInModal, hideCross }) => {
         event.preventDefault();
         await signInWithEmailAndPassword(email, password);
         if (remember) {
-            const { data } = await axios.post('http://localhost:5000/login', { email });
+            const { data } = await axios.post('https://server-auto-hive.vercel.app/login', { email });
             localStorage.setItem('accessToken', data);
         }
     }

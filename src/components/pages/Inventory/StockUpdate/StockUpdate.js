@@ -12,7 +12,7 @@ import axios from 'axios';
 const StockUpdate = ({ liked, wished, user }) => {
     const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
     const { carId } = useParams();
-    const [car, loading, serCar] = useFetchData(`http://localhost:5000/car/${carId}`);
+    const [car, loading, serCar] = useFetchData(`https://server-auto-hive.vercel.app/car/${carId}`);
     const [restock, setRestock] = useState(0);
     const [confirmModal, setConfirmModal] = useState(false);
     const [formData, setFormData] = useState({});
@@ -33,7 +33,7 @@ const StockUpdate = ({ liked, wished, user }) => {
 
     useEffect(() => {
         if (Object.keys(formData).length !== 0) {
-            const url = `http://localhost:5000/update-car/${carId}`;
+            const url = `https://server-auto-hive.vercel.app/update-car/${carId}`;
 
             const postData = async () => {
                 try {

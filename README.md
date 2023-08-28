@@ -1,7 +1,7 @@
 # Auto Hive | A car dealer company project
 
 - Client Side Live Link: [https://classroom.github.com/a/Y0bAS9YS](https://classroom.github.com/a/Y0bAS9YS)
-- Server Side Live Link: [https://classroom.github.com/a/Y0bAS9YS](https://classroom.github.com/a/Y0bAS9YS)
+- Server Side Live Link: [https://server-auto-hive.vercel.app/](https://server-auto-hive.vercel.app/)
 
 
 ## The things uses on this project

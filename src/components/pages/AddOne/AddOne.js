@@ -57,7 +57,7 @@ const AddOne = () => {
     useEffect(() => {
         // check if the object is empty or not
         if (Object.keys(formData).length !== 0) {
-            const url = `http://localhost:5000/cars`;
+            const url = `https://server-auto-hive.vercel.app/cars`;
 
             const postData = async () => {
                 try {

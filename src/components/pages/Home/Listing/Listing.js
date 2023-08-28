@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 
 const Listing = () => {
-    const [cars, loading, setCars] = useFetchData('http://localhost:5000/cars');
+    const [cars, loading, setCars] = useFetchData('https://server-auto-hive.vercel.app/cars');
     const [isLiked, setLiked] = useState(false);
     const showCar = cars.slice(0, 6);
 

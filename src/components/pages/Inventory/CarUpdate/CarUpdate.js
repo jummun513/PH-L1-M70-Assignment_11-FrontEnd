@@ -14,7 +14,7 @@ import Processing from '../../../shared/Processing/Processing';
 const CarUpdate = () => {
     const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
     const { carId } = useParams();
-    const [car, loading, serCar] = useFetchData(`http://localhost:5000/car/${carId}`);
+    const [car, loading, serCar] = useFetchData(`https://server-auto-hive.vercel.app/car/${carId}`);
     const dealer = useRef();
     const model = useRef();
     const price = useRef();
@@ -32,7 +32,7 @@ const CarUpdate = () => {
 
     useEffect(() => {
         if (Object.keys(formData).length !== 0) {
-            const url = `http://localhost:5000/update-car/${carId}`;
+            const url = `https://server-auto-hive.vercel.app/update-car/${carId}`;
 
             const postData = async () => {
                 try {

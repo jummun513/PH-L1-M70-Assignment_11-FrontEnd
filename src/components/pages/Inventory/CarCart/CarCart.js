@@ -45,7 +45,7 @@ const CarCart = ({ data, liked, deleteBtn, from }) => {
     useEffect(() => {
         if (isButtonClicked) {
             if ((Object.keys(wishedItem).length !== 0)) {
-                const url = `http://localhost:5000/users`;
+                const url = `https://server-auto-hive.vercel.app/users`;
 
                 const postData = async () => {
                     try {

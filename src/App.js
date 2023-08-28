@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     if ((displayUser !== null) && (displayUser?.email !== undefined)) {
-      const url = `http://localhost:5000/user/${displayUser?.email}`;
+      const url = `https://server-auto-hive.vercel.app/user/${displayUser?.email}`;
       const fetchUserData = async () => {
         try {
           setLoading(true);

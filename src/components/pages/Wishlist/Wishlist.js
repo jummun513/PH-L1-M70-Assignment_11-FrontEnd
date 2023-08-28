@@ -8,7 +8,7 @@ import SingIn from '../SignIn/SignIn';
 import CarCart from '../Inventory/CarCart/CarCart';
 
 const Wishlist = () => {
-    const [cars, loading, setCars] = useFetchData('http://localhost:5000/cars');
+    const [cars, loading, setCars] = useFetchData('https://server-auto-hive.vercel.app/cars');
     const [isLiked, setLiked] = useState(false);
     const [isWished, setWished] = useState(false);
     const user = false;

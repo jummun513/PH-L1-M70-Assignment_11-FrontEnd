@@ -14,7 +14,7 @@ import axios from 'axios';
 const ManageItem = () => {
     const [checked, setChecked] = useState(false);
     const { openSignInModal, setOpenSignInModal } = useContext(MyContext);
-    const [cars, loading, setCars] = useFetchData('http://localhost:5000/cars');
+    const [cars, loading, setCars] = useFetchData('https://server-auto-hive.vercel.app/cars');
     const [confirmModel, setConfirmModal] = useState(false);
     const [targetId, setTargetId] = useState('');
     const [targetTitle, setTargetTitle] = useState('');
@@ -34,7 +34,7 @@ const ManageItem = () => {
     };
 
     const handleDelete = () => {
-        const url = `http://localhost:5000/car/${targetId}`;
+        const url = `https://server-auto-hive.vercel.app/car/${targetId}`;
 
         const postData = async () => {
             try {
